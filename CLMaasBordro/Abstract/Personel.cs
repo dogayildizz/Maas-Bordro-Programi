@@ -1,11 +1,18 @@
-﻿namespace CLMaasBordro.Abstract
+﻿using System.Text.Json.Serialization;
+
+namespace CLMaasBordro.Abstract
 {
     public abstract class Personel
     {
-        public uint Id {get;}   //enkapsüle et
+        //[JsonIgnore]
+        //public uint Id {get;}   //enkapsüle et
+
+        public string Kadro { get;}
         public string AdSoyad { get; set; }
+        [JsonIgnore]
         public uint CalismaSaati { get; set; }
-        public abstract decimal SaatlikUcret { get; set; }  //Saatlik ücret dışarıdan değiştirilemez bu yüzden sadece get
+        public abstract decimal SaatlikUcret { get; set; } 
         public abstract decimal ToplamMaasHesapla(int calismaSaati);
+        
     }
 }

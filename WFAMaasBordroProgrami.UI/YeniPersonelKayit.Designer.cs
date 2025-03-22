@@ -1,6 +1,6 @@
 ﻿namespace WFAMaasBordroProgrami.UI
 {
-    partial class MaasGuncelleme
+    partial class YeniPersonelKayit
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // MaasGuncelleme
+            // YeniPersonelKayit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1368, 532);
+            ClientSize = new Size(938, 532);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "MaasGuncelleme";
-            Text = "MaasGuncelleme";
+            Name = "YeniPersonelKayit";
+            Text = "YeniPersonelKayit";
             ResumeLayout(false);
         }
 

@@ -1,11 +1,16 @@
 using CLMaasBordro.Abstract;
 using CLMaasBordro.Data;
 using CLMaasBordro.Enum;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WFAMaasBordroProgrami.UI
 {
     public partial class frmMenu : Form
     {
+       
         public frmMenu()
         {
             InitializeComponent();
@@ -31,22 +36,27 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnMaasGuncelle_Click(object sender, EventArgs e)
         {
-
+            MaasGuncelleme frmMaasGuncelleme = new MaasGuncelleme();
+            FormGetir(frmMaasGuncelleme);
         }
 
         private void btnBireyselBordroFormunuGetir_Click(object sender, EventArgs e)
         {
-
+            BireyselBordro frmBireyselBordro = new BireyselBordro();
+            FormGetir(frmBireyselBordro);
         }
 
         private void btnTumCalisanlarinBordrosu_Click(object sender, EventArgs e)
         {
-
+            TumCalisanlarinBordrosu frmTumCalisanlarinBordrosu = new TumCalisanlarinBordrosu();
+            FormGetir(frmTumCalisanlarinBordrosu);
         }
 
         private void btnProgramiKapat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }

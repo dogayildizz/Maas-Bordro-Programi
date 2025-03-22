@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlMenu = new Panel();
             btnProgramiKapat = new Guna.UI2.WinForms.Guna2Button();
             btnMaasGuncelle = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -64,7 +64,7 @@
             // 
             // btnProgramiKapat
             // 
-            btnProgramiKapat.CustomizableEdges = customizableEdges1;
+            btnProgramiKapat.CustomizableEdges = customizableEdges31;
             btnProgramiKapat.DisabledState.BorderColor = Color.DarkGray;
             btnProgramiKapat.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProgramiKapat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -74,7 +74,7 @@
             btnProgramiKapat.ForeColor = Color.White;
             btnProgramiKapat.Location = new Point(1304, 0);
             btnProgramiKapat.Name = "btnProgramiKapat";
-            btnProgramiKapat.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnProgramiKapat.ShadowDecoration.CustomizableEdges = customizableEdges32;
             btnProgramiKapat.Size = new Size(64, 56);
             btnProgramiKapat.TabIndex = 1;
             btnProgramiKapat.Text = "X";
@@ -82,7 +82,7 @@
             // 
             // btnMaasGuncelle
             // 
-            btnMaasGuncelle.CustomizableEdges = customizableEdges3;
+            btnMaasGuncelle.CustomizableEdges = customizableEdges33;
             btnMaasGuncelle.DisabledState.BorderColor = Color.DarkGray;
             btnMaasGuncelle.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMaasGuncelle.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -94,7 +94,7 @@
             btnMaasGuncelle.ForeColor = Color.White;
             btnMaasGuncelle.Location = new Point(298, 151);
             btnMaasGuncelle.Name = "btnMaasGuncelle";
-            btnMaasGuncelle.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnMaasGuncelle.ShadowDecoration.CustomizableEdges = customizableEdges34;
             btnMaasGuncelle.Size = new Size(292, 62);
             btnMaasGuncelle.TabIndex = 1;
             btnMaasGuncelle.Text = "Maaş Güncelle";
@@ -102,7 +102,7 @@
             // 
             // btnPersonelIslemleriFormunuGetir
             // 
-            btnPersonelIslemleriFormunuGetir.CustomizableEdges = customizableEdges5;
+            btnPersonelIslemleriFormunuGetir.CustomizableEdges = customizableEdges35;
             btnPersonelIslemleriFormunuGetir.DisabledState.BorderColor = Color.DarkGray;
             btnPersonelIslemleriFormunuGetir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPersonelIslemleriFormunuGetir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -114,7 +114,7 @@
             btnPersonelIslemleriFormunuGetir.ForeColor = Color.White;
             btnPersonelIslemleriFormunuGetir.Location = new Point(0, 151);
             btnPersonelIslemleriFormunuGetir.Name = "btnPersonelIslemleriFormunuGetir";
-            btnPersonelIslemleriFormunuGetir.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnPersonelIslemleriFormunuGetir.ShadowDecoration.CustomizableEdges = customizableEdges36;
             btnPersonelIslemleriFormunuGetir.Size = new Size(292, 62);
             btnPersonelIslemleriFormunuGetir.TabIndex = 1;
             btnPersonelIslemleriFormunuGetir.Text = "Personel İşlemleri";
@@ -122,7 +122,7 @@
             // 
             // btnBireyselBordroFormunuGetir
             // 
-            btnBireyselBordroFormunuGetir.CustomizableEdges = customizableEdges7;
+            btnBireyselBordroFormunuGetir.CustomizableEdges = customizableEdges37;
             btnBireyselBordroFormunuGetir.DisabledState.BorderColor = Color.DarkGray;
             btnBireyselBordroFormunuGetir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBireyselBordroFormunuGetir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -134,7 +134,7 @@
             btnBireyselBordroFormunuGetir.ForeColor = Color.White;
             btnBireyselBordroFormunuGetir.Location = new Point(596, 151);
             btnBireyselBordroFormunuGetir.Name = "btnBireyselBordroFormunuGetir";
-            btnBireyselBordroFormunuGetir.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnBireyselBordroFormunuGetir.ShadowDecoration.CustomizableEdges = customizableEdges38;
             btnBireyselBordroFormunuGetir.Size = new Size(292, 62);
             btnBireyselBordroFormunuGetir.TabIndex = 1;
             btnBireyselBordroFormunuGetir.Text = "Bireysel Bordro";
@@ -142,7 +142,7 @@
             // 
             // btnTumCalisanlarinBordrosu
             // 
-            btnTumCalisanlarinBordrosu.CustomizableEdges = customizableEdges9;
+            btnTumCalisanlarinBordrosu.CustomizableEdges = customizableEdges39;
             btnTumCalisanlarinBordrosu.DisabledState.BorderColor = Color.DarkGray;
             btnTumCalisanlarinBordrosu.DisabledState.CustomBorderColor = Color.DarkGray;
             btnTumCalisanlarinBordrosu.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -154,7 +154,7 @@
             btnTumCalisanlarinBordrosu.ForeColor = Color.White;
             btnTumCalisanlarinBordrosu.Location = new Point(894, 151);
             btnTumCalisanlarinBordrosu.Name = "btnTumCalisanlarinBordrosu";
-            btnTumCalisanlarinBordrosu.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnTumCalisanlarinBordrosu.ShadowDecoration.CustomizableEdges = customizableEdges40;
             btnTumCalisanlarinBordrosu.Size = new Size(292, 62);
             btnTumCalisanlarinBordrosu.TabIndex = 1;
             btnTumCalisanlarinBordrosu.Text = "Çalışanların Bordrosu";

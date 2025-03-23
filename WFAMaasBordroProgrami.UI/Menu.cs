@@ -51,12 +51,6 @@ namespace WFAMaasBordroProgrami.UI
             FormGetir(frmTumCalisanlarinBordrosu);
         }
 
-        private void btnYeniPersonelKayitFormunuGetir_Click(object sender, EventArgs e)
-        {
-            YeniPersonelKayit frmYeniPersonelKayit = new YeniPersonelKayit();
-            FormGetir(frmYeniPersonelKayit);
-        }
-
         private void btnMemurIslemleriFormunuGetir_Click(object sender, EventArgs e)
         {
             MemurIslemleri frmMemurIslemleri = new MemurIslemleri();

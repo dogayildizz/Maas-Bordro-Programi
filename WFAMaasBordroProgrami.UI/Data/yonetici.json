@@ -1,6 +1,22 @@
 [
   {
     "Kadro": "Yonetici",
-    "AdSoyad": "Do\u011Fa Y\u0131ld\u0131z"
+    "AdSoyad": "Do\u011Fa Y\u0131ld\u0131z",
+    "CalismaSaati": 50
+  },
+  {
+    "Kadro": "Yonetici",
+    "AdSoyad": "Berkay Arslan",
+    "CalismaSaati": 200
+  },
+  {
+    "Kadro": "Yonetici",
+    "AdSoyad": "Sibel Y\u0131ld\u0131z",
+    "CalismaSaati": 10
+  },
+  {
+    "Kadro": "Yonetici",
+    "AdSoyad": "Servet Y\u0131ld\u0131z",
+    "CalismaSaati": 60
   }
 ]

@@ -21,7 +21,13 @@ namespace CLMaasBordro.Models
             string yeniJson = JsonSerializer.Serialize(memurlar, jsonAyarlar);
             File.WriteAllText(jsonDosyaYolu, yeniJson);
         }
-
+        static public void YoneticiYaz(List<Yonetici> yoneticiler)
+        {
+            var jsonAyarlar = new JsonSerializerOptions { WriteIndented = true };
+            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "yonetici.json");
+            string yeniJson = JsonSerializer.Serialize(yoneticiler, jsonAyarlar);
+            File.WriteAllText(jsonDosyaYolu, yeniJson);
+        }
         static public List<Memur> MemurOku()
         {
             List<Memur> memurlar = new List<Memur>();
@@ -39,7 +45,7 @@ namespace CLMaasBordro.Models
         {
             List<Yonetici> yoneticiler = new List<Yonetici>();
 
-            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "memur.json");
+            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "yonetici.json");
             string jsonVerileri = File.ReadAllText(jsonDosyaYolu);
 
             var okunanVeriler = JsonSerializer.Deserialize<List<Yonetici>>(jsonVerileri);

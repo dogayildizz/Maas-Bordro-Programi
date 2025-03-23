@@ -16,10 +16,37 @@ namespace WFAMaasBordroProgrami.UI
 {
     public partial class MemurIslemleri : Form
     {
+
+        bool cellClickEdildiMi = false;
         List<Memur> memurlar = new List<Memur>();
         public MemurIslemleri()
         {
             InitializeComponent();
+        }
+        public void ListeVeJsonEkle()
+        {
+            Memur memur = new Memur
+            {
+                AdSoyad = txtMemurAdSoyad.Text,
+                CalismaSaati = uint.Parse(txtMemurCalismaSaati.Text),
+                MemurunDerecesi = (MemurDerecesi)cmbMemurDerece.SelectedItem
+            };
+            memurlar.Add(memur);
+            JsonDosya.MemurYaz(memurlar);
+        }
+        public void ListeVeJsonSil()
+        {
+            Memur secilenMemur = new Memur();
+            secilenMemur.AdSoyad = dgvMemurlar.SelectedRows[0].Cells[4].Value.ToString();
+            for (int i = 0; i < memurlar.Count; i++)
+            {
+                Memur memur = memurlar[i];
+                if (memur.AdSoyad == secilenMemur.AdSoyad)
+                {
+                    memurlar.RemoveAt(i);
+                }
+            }
+            JsonDosya.MemurYaz(memurlar);
         }
         public void ListeVeJsonGuncelle()
         {
@@ -44,6 +71,7 @@ namespace WFAMaasBordroProgrami.UI
         }
         private void dgvMemurlar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            cellClickEdildiMi = true;
             if (dgvMemurlar.SelectedRows.Count == 0)
             {
                 return;
@@ -61,7 +89,6 @@ namespace WFAMaasBordroProgrami.UI
             dgvMemurlar.DataSource = null;
             dgvMemurlar.DataSource = memurlar;
 
-            dgvMemurlar.Columns["Kadro"].Visible = false;
             dgvMemurlar.Columns["EkKazanc"].Visible = false;
             dgvMemurlar.Columns["SaatlikUcret"].Visible = false;
         }
@@ -69,17 +96,33 @@ namespace WFAMaasBordroProgrami.UI
         {
             txtMemurAdSoyad.Text = txtMemurCalismaSaati.Text = string.Empty;
             cmbMemurDerece.SelectedItem = null;
+            dgvMemurlar.ClearSelection();
+            cellClickEdildiMi = false;
         }
 
         private void MemurIslemleri_Load(object sender, EventArgs e)
         {
             cmbMemurDerece.DataSource = Enum.GetValues(typeof(MemurDerecesi));
             DataGridViewGuncelle();
+            Temizle();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (dgvMemurlar.SelectedRows.Count == 0 || !cellClickEdildiMi)
+            {
+                MessageBox.Show("Lütfen bir çalışan seçiniz!");
+                return;
+            }
+            ListeVeJsonSil();
+            DataGridViewGuncelle();
+            Temizle();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (txtMemurAdSoyad.Text == null )
+
+            if (dgvMemurlar.SelectedRows.Count == 0 || !cellClickEdildiMi)
             {
                 MessageBox.Show("Lütfen bir çalışan seçiniz!");
                 return;
@@ -89,6 +132,16 @@ namespace WFAMaasBordroProgrami.UI
             Temizle();
         }
 
-
+        private void btnMemurEkle_Click(object sender, EventArgs e)
+        {
+            if(txtMemurAdSoyad.Text==string.Empty || txtMemurCalismaSaati.Text==string.Empty || cmbMemurDerece.SelectedItem == null)
+            {
+                MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
+                return;
+            }
+            ListeVeJsonEkle();
+            DataGridViewGuncelle();
+            Temizle();
+        }
     }
 }

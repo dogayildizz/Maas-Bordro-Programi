@@ -39,6 +39,8 @@ namespace WFAMaasBordroProgrami.UI
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             cmbMemurDerece = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,6 +50,9 @@ namespace WFAMaasBordroProgrami.UI
             btnSil = new Button();
             btnGuncelle = new Button();
             dgvMemurlar = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnMemurEkle = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvMemurlar).BeginInit();
             SuspendLayout();
             // 
@@ -62,7 +67,7 @@ namespace WFAMaasBordroProgrami.UI
             cmbMemurDerece.Font = new Font("Segoe UI", 10F);
             cmbMemurDerece.ForeColor = Color.FromArgb(68, 88, 112);
             cmbMemurDerece.ItemHeight = 30;
-            cmbMemurDerece.Location = new Point(523, 68);
+            cmbMemurDerece.Location = new Point(531, 163);
             cmbMemurDerece.Name = "cmbMemurDerece";
             cmbMemurDerece.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbMemurDerece.Size = new Size(358, 36);
@@ -73,7 +78,7 @@ namespace WFAMaasBordroProgrami.UI
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             guna2HtmlLabel5.ForeColor = Color.Black;
-            guna2HtmlLabel5.Location = new Point(523, 36);
+            guna2HtmlLabel5.Location = new Point(531, 131);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(56, 25);
             guna2HtmlLabel5.TabIndex = 15;
@@ -149,10 +154,11 @@ namespace WFAMaasBordroProgrami.UI
             btnSil.TabIndex = 23;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
             // 
             // btnGuncelle
             // 
-            btnGuncelle.Location = new Point(1002, 75);
+            btnGuncelle.Location = new Point(1002, 111);
             btnGuncelle.Name = "btnGuncelle";
             btnGuncelle.Size = new Size(94, 29);
             btnGuncelle.TabIndex = 23;
@@ -184,10 +190,11 @@ namespace WFAMaasBordroProgrami.UI
             dgvMemurlar.DefaultCellStyle = dataGridViewCellStyle3;
             dgvMemurlar.GridColor = Color.FromArgb(231, 229, 255);
             dgvMemurlar.Location = new Point(77, 232);
+            dgvMemurlar.MultiSelect = false;
             dgvMemurlar.Name = "dgvMemurlar";
             dgvMemurlar.RowHeadersVisible = false;
             dgvMemurlar.RowHeadersWidth = 51;
-            dgvMemurlar.Size = new Size(1218, 265);
+            dgvMemurlar.Size = new Size(1204, 265);
             dgvMemurlar.TabIndex = 22;
             dgvMemurlar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvMemurlar.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -212,18 +219,63 @@ namespace WFAMaasBordroProgrami.UI
             dgvMemurlar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvMemurlar.CellClick += dgvMemurlar_CellClick;
             // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.CustomizableEdges = customizableEdges7;
+            guna2TextBox1.DefaultText = "Memur";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Microsoft Sans Serif", 10.2F);
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new Point(531, 68);
+            guna2TextBox1.Margin = new Padding(4);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.ReadOnly = true;
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2TextBox1.Size = new Size(358, 36);
+            guna2TextBox1.TabIndex = 14;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 10.2F);
+            guna2HtmlLabel1.ForeColor = Color.Black;
+            guna2HtmlLabel1.Location = new Point(531, 36);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(48, 25);
+            guna2HtmlLabel1.TabIndex = 17;
+            guna2HtmlLabel1.Text = "Kadro";
+            // 
+            // btnMemurEkle
+            // 
+            btnMemurEkle.Location = new Point(1002, 68);
+            btnMemurEkle.Name = "btnMemurEkle";
+            btnMemurEkle.Size = new Size(94, 29);
+            btnMemurEkle.TabIndex = 24;
+            btnMemurEkle.Text = "Ekle";
+            btnMemurEkle.UseVisualStyleBackColor = true;
+            btnMemurEkle.Click += btnMemurEkle_Click;
+            // 
             // MemurIslemleri
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1368, 532);
+            Controls.Add(btnMemurEkle);
             Controls.Add(dgvMemurlar);
             Controls.Add(btnGuncelle);
             Controls.Add(btnSil);
             Controls.Add(cmbMemurDerece);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel3);
+            Controls.Add(guna2HtmlLabel1);
             Controls.Add(guna2HtmlLabel4);
+            Controls.Add(guna2TextBox1);
             Controls.Add(txtMemurCalismaSaati);
             Controls.Add(txtMemurAdSoyad);
             FormBorderStyle = FormBorderStyle.None;
@@ -245,5 +297,8 @@ namespace WFAMaasBordroProgrami.UI
         private Button btnSil;
         private Button btnGuncelle;
         private Guna.UI2.WinForms.Guna2DataGridView dgvMemurlar;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Button btnMemurEkle;
     }
 }

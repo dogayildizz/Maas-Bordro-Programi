@@ -27,8 +27,21 @@ namespace CLMaasBordro.Data
         {
             get
             {
-                _saatlikUcret = (int)MemurunDerecesi;
-                return _saatlikUcret;
+                switch (MemurunDerecesi)
+                {
+                    case MemurDerecesi.UstKidemli:
+                        return 570;
+                    case MemurDerecesi.Kidemli:
+                        return 550;
+                    case MemurDerecesi.OrtaKidemli:
+                        return 530;
+                    case MemurDerecesi.Deneyimli:
+                        return 515;
+                    case MemurDerecesi.YeniBaslayan:
+                        return 500;
+                    default:
+                        return 0;
+                }
             }
             set
             {

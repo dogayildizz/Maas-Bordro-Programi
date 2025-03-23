@@ -160,7 +160,7 @@
             btnPersonelIslemleri.FillColor2 = Color.FromArgb(44, 62, 71);
             btnPersonelIslemleri.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             btnPersonelIslemleri.ForeColor = Color.White;
-            btnPersonelIslemleri.Location = new Point(988, 34);
+            btnPersonelIslemleri.Location = new Point(950, 75);
             btnPersonelIslemleri.Name = "btnPersonelIslemleri";
             btnPersonelIslemleri.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnPersonelIslemleri.Size = new Size(292, 62);

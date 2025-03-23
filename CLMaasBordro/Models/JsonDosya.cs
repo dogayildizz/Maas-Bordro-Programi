@@ -14,19 +14,39 @@ namespace CLMaasBordro.Models
     static public class JsonDosya
     {
 
-        static public List<Personel> Oku()
+        static public void MemurYaz(List<Memur> memurlar)
         {
-            List<Personel> personeller = new List<Personel>();
+            var jsonAyarlar = new JsonSerializerOptions { WriteIndented = true };
+            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "memur.json");
+            string yeniJson = JsonSerializer.Serialize(memurlar, jsonAyarlar);
+            File.WriteAllText(jsonDosyaYolu, yeniJson);
+        }
 
-            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "data.json");
+        static public List<Memur> MemurOku()
+        {
+            List<Memur> memurlar = new List<Memur>();
+
+            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "memur.json");
             string jsonVerileri = File.ReadAllText(jsonDosyaYolu);
 
-            var okunanVeriler = JsonSerializer.Deserialize<List<Personel>>(jsonVerileri);
+            var okunanVeriler = JsonSerializer.Deserialize<List<Memur>>(jsonVerileri);
 
-            personeller.AddRange(okunanVeriler);
+            memurlar.AddRange(okunanVeriler);
 
-            return personeller;
+            return memurlar;
+        }
+        static public List<Yonetici> YoneticiOku()
+        {
+            List<Yonetici> yoneticiler = new List<Yonetici>();
 
+            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "memur.json");
+            string jsonVerileri = File.ReadAllText(jsonDosyaYolu);
+
+            var okunanVeriler = JsonSerializer.Deserialize<List<Yonetici>>(jsonVerileri);
+
+            yoneticiler.AddRange(okunanVeriler);
+
+            return yoneticiler;
         }
     }
 }

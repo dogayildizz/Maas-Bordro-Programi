@@ -14,7 +14,7 @@ namespace CLMaasBordro.Data
         private decimal _saatlikUcret;
         private decimal _ekKazanc;
 
-        public string Kadro { get; } = "Memur";
+        public override string Kadro { get; } = "Memur";
         [JsonIgnore]
         public decimal EkKazanc
         {
@@ -36,7 +36,7 @@ namespace CLMaasBordro.Data
             }
         }
 
-        public override decimal ToplamMaasHesapla(int calismaSaati)
+        public override decimal ToplamMaasHesapla(uint calismaSaati)
         {
             decimal toplamMaas=0;
 

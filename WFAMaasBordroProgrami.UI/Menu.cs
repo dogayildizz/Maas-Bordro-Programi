@@ -10,7 +10,7 @@ namespace WFAMaasBordroProgrami.UI
 {
     public partial class frmMenu : Form
     {
-       
+
         public frmMenu()
         {
             InitializeComponent();
@@ -28,12 +28,11 @@ namespace WFAMaasBordroProgrami.UI
 
         }
 
-        private void btnPersonelIslemleriFormunuGetir_Click(object sender, EventArgs e)
+        #region Buttonlarýn Click Eventleri
+        private void btnProgramiKapat_Click(object sender, EventArgs e)
         {
-            PersonelIslemleri frmPersonelIslemleri = new PersonelIslemleri();
-            FormGetir(frmPersonelIslemleri);
+            Application.Exit();
         }
-
         private void btnMaasGuncelle_Click(object sender, EventArgs e)
         {
             MaasGuncelleme frmMaasGuncelleme = new MaasGuncelleme();
@@ -52,11 +51,25 @@ namespace WFAMaasBordroProgrami.UI
             FormGetir(frmTumCalisanlarinBordrosu);
         }
 
-        private void btnProgramiKapat_Click(object sender, EventArgs e)
+        private void btnYeniPersonelKayitFormunuGetir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            YeniPersonelKayit frmYeniPersonelKayit = new YeniPersonelKayit();
+            FormGetir(frmYeniPersonelKayit);
         }
 
+        private void btnMemurIslemleriFormunuGetir_Click(object sender, EventArgs e)
+        {
+            MemurIslemleri frmMemurIslemleri = new MemurIslemleri();
+            FormGetir(frmMemurIslemleri);
+        }
+
+        private void btnYoneticiIslemleriFormunuGetir_Click(object sender, EventArgs e)
+        {
+            YoneticiIslemleri frmYoneticiIslemleri = new YoneticiIslemleri();
+            FormGetir(frmYoneticiIslemleri);
+        }
+
+        #endregion
 
     }
 }

@@ -4,15 +4,17 @@ namespace CLMaasBordro.Abstract
 {
     public abstract class Personel
     {
+        public string AdSoyad { get; set; }
+        [JsonIgnore]
+
         //[JsonIgnore]
         //public uint Id {get;}   //enkapsüle et
 
-        public string Kadro { get;}
-        public string AdSoyad { get; set; }
-        [JsonIgnore]
+        public abstract string Kadro { get;}
+       
         public uint CalismaSaati { get; set; }
         public abstract decimal SaatlikUcret { get; set; } 
-        public abstract decimal ToplamMaasHesapla(int calismaSaati);
+        public abstract decimal ToplamMaasHesapla(uint calismaSaati);
         
     }
 }

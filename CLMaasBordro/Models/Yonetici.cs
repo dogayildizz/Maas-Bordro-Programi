@@ -11,7 +11,7 @@ namespace CLMaasBordro.Data
     public class Yonetici : Personel
     {
         private decimal _saatlikUcret=550;
-        public string Kadro { get;} = "Yonetici";
+        public override string Kadro { get;} = "Yonetici";
 
         [JsonIgnore]
         public override decimal SaatlikUcret
@@ -20,7 +20,7 @@ namespace CLMaasBordro.Data
             set { _saatlikUcret = value;}
         }
        //public string AdSoyad { get; set; }
-        public override decimal ToplamMaasHesapla(int calismaSaati)
+        public override decimal ToplamMaasHesapla(uint calismaSaati)
         {
             throw new NotImplementedException();
         }

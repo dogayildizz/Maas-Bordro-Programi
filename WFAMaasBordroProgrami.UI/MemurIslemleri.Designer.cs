@@ -1,4 +1,6 @@
-﻿namespace WFAMaasBordroProgrami.UI
+﻿using System.Windows.Forms;
+
+namespace WFAMaasBordroProgrami.UI
 {
     partial class MemurIslemleri
     {
@@ -28,137 +30,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            dgvPersoneller = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            cmbMemurDerece = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)dgvPersoneller).BeginInit();
+            txtMemurAdSoyad = new Guna.UI2.WinForms.Guna2TextBox();
+            txtMemurCalismaSaati = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSil = new Button();
+            btnGuncelle = new Button();
+            dgvMemurlar = new Guna.UI2.WinForms.Guna2DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvMemurlar).BeginInit();
             SuspendLayout();
             // 
-            // dgvPersoneller
+            // cmbMemurDerece
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dgvPersoneller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvPersoneller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvPersoneller.ColumnHeadersHeight = 4;
-            dgvPersoneller.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvPersoneller.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvPersoneller.GridColor = Color.FromArgb(231, 229, 255);
-            dgvPersoneller.Location = new Point(77, 232);
-            dgvPersoneller.Name = "dgvPersoneller";
-            dgvPersoneller.RowHeadersVisible = false;
-            dgvPersoneller.RowHeadersWidth = 51;
-            dgvPersoneller.Size = new Size(784, 265);
-            dgvPersoneller.TabIndex = 22;
-            dgvPersoneller.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvPersoneller.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvPersoneller.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvPersoneller.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvPersoneller.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvPersoneller.ThemeStyle.BackColor = Color.White;
-            dgvPersoneller.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvPersoneller.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvPersoneller.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvPersoneller.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10F);
-            dgvPersoneller.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvPersoneller.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvPersoneller.ThemeStyle.HeaderStyle.Height = 4;
-            dgvPersoneller.ThemeStyle.ReadOnly = false;
-            dgvPersoneller.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvPersoneller.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvPersoneller.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 10F);
-            dgvPersoneller.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvPersoneller.ThemeStyle.RowsStyle.Height = 29;
-            dgvPersoneller.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvPersoneller.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // guna2ComboBox3
-            // 
-            guna2ComboBox3.BackColor = Color.Transparent;
-            guna2ComboBox3.CustomizableEdges = customizableEdges1;
-            guna2ComboBox3.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox3.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox3.Font = new Font("Segoe UI", 10F);
-            guna2ComboBox3.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox3.ItemHeight = 30;
-            guna2ComboBox3.Location = new Point(503, 68);
-            guna2ComboBox3.Name = "guna2ComboBox3";
-            guna2ComboBox3.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ComboBox3.Size = new Size(358, 36);
-            guna2ComboBox3.TabIndex = 19;
-            // 
-            // guna2ComboBox2
-            // 
-            guna2ComboBox2.BackColor = Color.Transparent;
-            guna2ComboBox2.CustomizableEdges = customizableEdges3;
-            guna2ComboBox2.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox2.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox2.Font = new Font("Segoe UI", 10F);
-            guna2ComboBox2.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox2.ItemHeight = 30;
-            guna2ComboBox2.Location = new Point(503, 163);
-            guna2ComboBox2.Name = "guna2ComboBox2";
-            guna2ComboBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ComboBox2.Size = new Size(358, 36);
-            guna2ComboBox2.TabIndex = 20;
-            // 
-            // guna2ComboBox1
-            // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.CustomizableEdges = customizableEdges5;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Segoe UI", 10F);
-            guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Location = new Point(77, 163);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ComboBox1.Size = new Size(358, 36);
-            guna2ComboBox1.TabIndex = 21;
+            cmbMemurDerece.BackColor = Color.Transparent;
+            cmbMemurDerece.CustomizableEdges = customizableEdges1;
+            cmbMemurDerece.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbMemurDerece.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMemurDerece.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbMemurDerece.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbMemurDerece.Font = new Font("Segoe UI", 10F);
+            cmbMemurDerece.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbMemurDerece.ItemHeight = 30;
+            cmbMemurDerece.Location = new Point(523, 68);
+            cmbMemurDerece.Name = "cmbMemurDerece";
+            cmbMemurDerece.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cmbMemurDerece.Size = new Size(358, 36);
+            cmbMemurDerece.TabIndex = 20;
             // 
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             guna2HtmlLabel5.ForeColor = Color.Black;
-            guna2HtmlLabel5.Location = new Point(503, 131);
+            guna2HtmlLabel5.Location = new Point(523, 36);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(56, 25);
             guna2HtmlLabel5.TabIndex = 15;
@@ -186,69 +101,149 @@
             guna2HtmlLabel4.TabIndex = 17;
             guna2HtmlLabel4.Text = "Toplam Çalışma Saati";
             // 
-            // guna2HtmlLabel2
+            // txtMemurAdSoyad
             // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 10.2F);
-            guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(503, 36);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(48, 25);
-            guna2HtmlLabel2.TabIndex = 18;
-            guna2HtmlLabel2.Text = "Kadro";
+            txtMemurAdSoyad.CustomizableEdges = customizableEdges3;
+            txtMemurAdSoyad.DefaultText = "";
+            txtMemurAdSoyad.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMemurAdSoyad.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMemurAdSoyad.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMemurAdSoyad.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMemurAdSoyad.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMemurAdSoyad.Font = new Font("Microsoft Sans Serif", 10.2F);
+            txtMemurAdSoyad.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMemurAdSoyad.Location = new Point(77, 68);
+            txtMemurAdSoyad.Margin = new Padding(4);
+            txtMemurAdSoyad.Name = "txtMemurAdSoyad";
+            txtMemurAdSoyad.PlaceholderText = "";
+            txtMemurAdSoyad.SelectedText = "";
+            txtMemurAdSoyad.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtMemurAdSoyad.Size = new Size(358, 36);
+            txtMemurAdSoyad.TabIndex = 14;
             // 
-            // guna2TextBox2
+            // txtMemurCalismaSaati
             // 
-            guna2TextBox2.CustomizableEdges = customizableEdges7;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Microsoft Sans Serif", 10.2F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(77, 68);
-            guna2TextBox2.Margin = new Padding(4);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox2.Size = new Size(358, 36);
-            guna2TextBox2.TabIndex = 14;
+            txtMemurCalismaSaati.CustomizableEdges = customizableEdges5;
+            txtMemurCalismaSaati.DefaultText = "";
+            txtMemurCalismaSaati.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMemurCalismaSaati.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMemurCalismaSaati.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMemurCalismaSaati.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMemurCalismaSaati.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMemurCalismaSaati.Font = new Font("Microsoft Sans Serif", 10.2F);
+            txtMemurCalismaSaati.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMemurCalismaSaati.Location = new Point(77, 163);
+            txtMemurCalismaSaati.Margin = new Padding(4);
+            txtMemurCalismaSaati.Name = "txtMemurCalismaSaati";
+            txtMemurCalismaSaati.PlaceholderText = "";
+            txtMemurCalismaSaati.SelectedText = "";
+            txtMemurCalismaSaati.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtMemurCalismaSaati.Size = new Size(358, 36);
+            txtMemurCalismaSaati.TabIndex = 14;
+            // 
+            // btnSil
+            // 
+            btnSil.Location = new Point(1002, 154);
+            btnSil.Name = "btnSil";
+            btnSil.Size = new Size(94, 29);
+            btnSil.TabIndex = 23;
+            btnSil.Text = "Sil";
+            btnSil.UseVisualStyleBackColor = true;
+            // 
+            // btnGuncelle
+            // 
+            btnGuncelle.Location = new Point(1002, 75);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(94, 29);
+            btnGuncelle.TabIndex = 23;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
+            // 
+            // dgvMemurlar
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvMemurlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvMemurlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvMemurlar.ColumnHeadersHeight = 40;
+            dgvMemurlar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvMemurlar.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvMemurlar.GridColor = Color.FromArgb(231, 229, 255);
+            dgvMemurlar.Location = new Point(77, 232);
+            dgvMemurlar.Name = "dgvMemurlar";
+            dgvMemurlar.RowHeadersVisible = false;
+            dgvMemurlar.RowHeadersWidth = 51;
+            dgvMemurlar.Size = new Size(1218, 265);
+            dgvMemurlar.TabIndex = 22;
+            dgvMemurlar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvMemurlar.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvMemurlar.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvMemurlar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvMemurlar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvMemurlar.ThemeStyle.BackColor = Color.White;
+            dgvMemurlar.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvMemurlar.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvMemurlar.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvMemurlar.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F);
+            dgvMemurlar.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvMemurlar.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvMemurlar.ThemeStyle.HeaderStyle.Height = 40;
+            dgvMemurlar.ThemeStyle.ReadOnly = false;
+            dgvMemurlar.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvMemurlar.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvMemurlar.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 10F);
+            dgvMemurlar.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvMemurlar.ThemeStyle.RowsStyle.Height = 29;
+            dgvMemurlar.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvMemurlar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvMemurlar.CellClick += dgvMemurlar_CellClick;
             // 
             // MemurIslemleri
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(938, 532);
-            Controls.Add(dgvPersoneller);
-            Controls.Add(guna2ComboBox3);
-            Controls.Add(guna2ComboBox2);
-            Controls.Add(guna2ComboBox1);
+            ClientSize = new Size(1368, 532);
+            Controls.Add(dgvMemurlar);
+            Controls.Add(btnGuncelle);
+            Controls.Add(btnSil);
+            Controls.Add(cmbMemurDerece);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel4);
-            Controls.Add(guna2HtmlLabel2);
-            Controls.Add(guna2TextBox2);
+            Controls.Add(txtMemurCalismaSaati);
+            Controls.Add(txtMemurAdSoyad);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MemurIslemleri";
             Text = "MemurIslemleri";
-            ((System.ComponentModel.ISupportInitialize)dgvPersoneller).EndInit();
+            Load += MemurIslemleri_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvMemurlar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2DataGridView dgvPersoneller;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbMemurDerece;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtMemurAdSoyad;
+        private Guna.UI2.WinForms.Guna2TextBox txtMemurCalismaSaati;
+        private Button btnSil;
+        private Button btnGuncelle;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvMemurlar;
     }
 }

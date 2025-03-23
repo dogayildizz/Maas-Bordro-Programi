@@ -2,11 +2,13 @@
   {
     "Kadro": "Memur",
     "MemurunDerecesi": 550,
-    "AdSoyad": "Servet Y\u0131ld\u0131z"
+    "AdSoyad": "Servet Y\u0131ld\u0131z",
+    "CalismaSaati": 10
   },
   {
     "Kadro": "Memur",
-    "MemurunDerecesi": 535,
-    "AdSoyad": "Sibel Y\u0131ld\u0131z"
+    "MemurunDerecesi": 520,
+    "AdSoyad": "Sibel Y\u0131ld\u0131z",
+    "CalismaSaati": 100
   }
 ]

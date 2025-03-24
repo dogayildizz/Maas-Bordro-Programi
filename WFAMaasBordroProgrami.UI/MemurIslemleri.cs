@@ -37,7 +37,7 @@ namespace WFAMaasBordroProgrami.UI
         public void ListeVeJsonSil()
         {
             Memur secilenMemur = new Memur();
-            secilenMemur.AdSoyad = dgvMemurlar.SelectedRows[0].Cells[4].Value.ToString();
+            secilenMemur.AdSoyad = dgvMemurlar.SelectedRows[0].Cells[5].Value.ToString();
             for (int i = 0; i < memurlar.Count; i++)
             {
                 Memur memur = memurlar[i];
@@ -51,7 +51,7 @@ namespace WFAMaasBordroProgrami.UI
         public void ListeVeJsonGuncelle()
         {
             Memur secilenMemur = new Memur();
-            secilenMemur.AdSoyad = dgvMemurlar.SelectedRows[0].Cells[4].Value.ToString();
+            secilenMemur.AdSoyad = dgvMemurlar.SelectedRows[0].Cells[5].Value.ToString();
 
             for (int i = 0; i < memurlar.Count; i++)
             {
@@ -78,8 +78,8 @@ namespace WFAMaasBordroProgrami.UI
             }
             DataGridViewRow seciliSatir = dgvMemurlar.SelectedRows[0];
 
-            txtMemurAdSoyad.Text = seciliSatir.Cells[4].Value.ToString();
-            txtMemurCalismaSaati.Text = seciliSatir.Cells[5].Value.ToString();
+            txtMemurAdSoyad.Text = seciliSatir.Cells[5].Value.ToString();
+            txtMemurCalismaSaati.Text = seciliSatir.Cells[6].Value.ToString();
             cmbMemurDerece.SelectedItem = (MemurDerecesi)dgvMemurlar.SelectedRows[0].Cells["MemurunDerecesi"].Value;
 
         }
@@ -91,6 +91,8 @@ namespace WFAMaasBordroProgrami.UI
 
             dgvMemurlar.Columns["EkKazanc"].Visible = false;
             dgvMemurlar.Columns["SaatlikUcret"].Visible = false;
+            dgvMemurlar.Columns["AnaKazanc"].Visible = false;
+
         }
         public void Temizle()
         {

@@ -13,8 +13,8 @@ namespace CLMaasBordro.Abstract
         public abstract string Kadro { get;}
        
         public uint CalismaSaati { get; set; }
-        public abstract decimal SaatlikUcret { get; set; } 
-        public abstract decimal ToplamMaasHesapla(uint calismaSaati);
+        public abstract decimal SaatlikUcret { get;} 
+        public abstract decimal ToplamMaasHesapla();
         
     }
 }

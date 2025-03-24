@@ -10,19 +10,35 @@ namespace CLMaasBordro.Data
 {
     public class Yonetici : Personel
     {
-        private decimal _saatlikUcret=550;
-        public override string Kadro { get;} = "Yonetici";
 
+        public override string Kadro {get;} = "Yönetici";
+        public decimal EkKazanc
+        {
+            get 
+            { 
+                return 2000; 
+            }
+        }
+        public decimal AnaKazanc
+        {
+            get 
+            { 
+                return SaatlikUcret*CalismaSaati; 
+            }
+        }
         [JsonIgnore]
         public override decimal SaatlikUcret
         {
-            get { return _saatlikUcret; }
-            set { _saatlikUcret = value;}
+            get
+            {
+                return 550;
+            }
         }
-       //public string AdSoyad { get; set; }
-        public override decimal ToplamMaasHesapla(uint calismaSaati)
+        public override decimal ToplamMaasHesapla()
         {
-            throw new NotImplementedException();
+
+            return AnaKazanc+EkKazanc;
+
         }
     }
 }

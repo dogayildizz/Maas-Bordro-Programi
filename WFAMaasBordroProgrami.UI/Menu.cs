@@ -33,11 +33,7 @@ namespace WFAMaasBordroProgrami.UI
         {
             Application.Exit();
         }
-        private void btnMaasGuncelle_Click(object sender, EventArgs e)
-        {
-            MaasGuncelleme frmMaasGuncelleme = new MaasGuncelleme();
-            FormGetir(frmMaasGuncelleme);
-        }
+
 
         private void btnBireyselBordroFormunuGetir_Click(object sender, EventArgs e)
         {

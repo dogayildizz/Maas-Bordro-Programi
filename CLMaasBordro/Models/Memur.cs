@@ -11,16 +11,31 @@ namespace CLMaasBordro.Data
 {
     public class Memur : Personel
     {
-        private decimal _saatlikUcret;
-        private decimal _ekKazanc;
 
         public override string Kadro { get; } = "Memur";
         [JsonIgnore]
         public decimal EkKazanc
         {
-            get { return _ekKazanc; }
-        }
+            get 
+            { 
+                if(CalismaSaati>180)
+                {
+                    return Convert.ToDecimal(((decimal)CalismaSaati - 180) * SaatlikUcret * 1.5m);
+                }
+                else
+                {
+                    return 0;
+                }
 
+            }
+        }
+        public decimal AnaKazanc
+        {
+            get
+            {
+                return (decimal)CalismaSaati * SaatlikUcret;
+            }
+        }
         public MemurDerecesi MemurunDerecesi { get; set; }
         [JsonIgnore]
         public override decimal SaatlikUcret
@@ -43,27 +58,11 @@ namespace CLMaasBordro.Data
                         return 0;
                 }
             }
-            set
-            {
-                _saatlikUcret = value;
-            }
+
         }
-
-        public override decimal ToplamMaasHesapla(uint calismaSaati)
+        public override decimal ToplamMaasHesapla()
         {
-            decimal toplamMaas=0;
-
-            if (calismaSaati <= 180)
-            {
-                toplamMaas = calismaSaati * _saatlikUcret;
-            }
-            else if (calismaSaati > 180)
-            {
-                _ekKazanc = ((decimal)(calismaSaati - 180) * _saatlikUcret)*1.5m;
-                toplamMaas = _ekKazanc + (_saatlikUcret * 180);
-            }
-
-            return toplamMaas;
+            return AnaKazanc + EkKazanc;
         }
     }
 }

@@ -20,7 +20,7 @@ namespace WFAMaasBordroProgrami.UI
         public void ListeVeJsonGuncelle()
         {
             Yonetici secilenYonetici = new Yonetici();
-            secilenYonetici.AdSoyad = dgvYoneticiler.SelectedRows[0].Cells[2].Value.ToString();
+            secilenYonetici.AdSoyad = dgvYoneticiler.SelectedRows[0].Cells[4].Value.ToString();
 
             for (int i = 0; i < yoneticiler.Count; i++)
             {
@@ -44,6 +44,8 @@ namespace WFAMaasBordroProgrami.UI
             dgvYoneticiler.DataSource = yoneticiler;
 
             dgvYoneticiler.Columns["SaatlikUcret"].Visible = false;
+            dgvYoneticiler.Columns["EkKazanc"].Visible = false;
+            dgvYoneticiler.Columns["AnaKazanc"].Visible = false;
         }
         public void ListeVeJsonEkle()
         {
@@ -59,7 +61,7 @@ namespace WFAMaasBordroProgrami.UI
         {
             Yonetici secilenYonetici = new Yonetici();
 
-            secilenYonetici.AdSoyad = dgvYoneticiler.SelectedRows[0].Cells[2].Value.ToString();
+            secilenYonetici.AdSoyad = dgvYoneticiler.SelectedRows[0].Cells[4].Value.ToString();
 
             for (int i = 0; i < yoneticiler.Count; i++)
             {
@@ -97,8 +99,8 @@ namespace WFAMaasBordroProgrami.UI
             }
             DataGridViewRow seciliSatir = dgvYoneticiler.SelectedRows[0];
 
-            txtYoneticiAdSoyad.Text = seciliSatir.Cells[2].Value.ToString();
-            txtYoneticiCalismaSaati.Text = seciliSatir.Cells[3].Value.ToString();
+            txtYoneticiAdSoyad.Text = seciliSatir.Cells[4].Value.ToString();
+            txtYoneticiCalismaSaati.Text = seciliSatir.Cells[5].Value.ToString();
         }
 
         private void btnYoneticiEkle_Click(object sender, EventArgs e)

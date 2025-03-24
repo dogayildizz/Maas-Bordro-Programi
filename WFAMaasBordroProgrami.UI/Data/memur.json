@@ -1,14 +1,9 @@
 [
   {
     "Kadro": "Memur",
-    "MemurunDerecesi": 550,
-    "AdSoyad": "Servet Y\u0131ld\u0131z",
-    "CalismaSaati": 150
-  },
-  {
-    "Kadro": "Memur",
-    "MemurunDerecesi": 520,
-    "AdSoyad": "Ali Yildiz",
-    "CalismaSaati": 2
+    "AnaKazanc": 114000,
+    "MemurunDerecesi": 0,
+    "AdSoyad": "Merve Mihmano\u011Flu",
+    "CalismaSaati": 200
   }
 ]

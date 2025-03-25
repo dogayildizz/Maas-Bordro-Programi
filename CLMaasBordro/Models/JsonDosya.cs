@@ -14,46 +14,28 @@ namespace CLMaasBordro.Models
     static public class JsonDosya
     {
 
-        static public void MemurYaz(List<Memur> memurlar)
+        static public void Yaz<T>(List<T> personeller,string dosyaAdi)
         {
+            
             var jsonAyarlar = new JsonSerializerOptions { WriteIndented = true };
-            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "memur.json");
-            string yeniJson = JsonSerializer.Serialize(memurlar, jsonAyarlar);
+            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", dosyaAdi);
+            string yeniJson = JsonSerializer.Serialize(personeller, jsonAyarlar);
             File.WriteAllText(jsonDosyaYolu, yeniJson);
         }
-        static public void YoneticiYaz(List<Yonetici> yoneticiler)
+        static public List<T> Oku<T>(string dosyaAdi)
         {
-            var jsonAyarlar = new JsonSerializerOptions { WriteIndented = true };
-            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "yonetici.json");
-            string yeniJson = JsonSerializer.Serialize(yoneticiler, jsonAyarlar);
-            File.WriteAllText(jsonDosyaYolu, yeniJson);
-        }
-        static public List<Memur> MemurOku()
-        {
-            List<Memur> memurlar = new List<Memur>();
+            List<T> personeller = new List<T>();
 
-            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "memur.json");
+            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", dosyaAdi);
             string jsonVerileri = File.ReadAllText(jsonDosyaYolu);
 
-            var okunanVeriler = JsonSerializer.Deserialize<List<Memur>>(jsonVerileri);
+            var okunanVeriler = JsonSerializer.Deserialize<List<T>>(jsonVerileri);
 
-            memurlar.AddRange(okunanVeriler);
+            personeller.AddRange(okunanVeriler);
 
-            return memurlar;
+            return personeller;
         }
-        static public List<Yonetici> YoneticiOku()
-        {
-            List<Yonetici> yoneticiler = new List<Yonetici>();
 
-            string jsonDosyaYolu = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "Data", "yonetici.json");
-            string jsonVerileri = File.ReadAllText(jsonDosyaYolu);
-
-            var okunanVeriler = JsonSerializer.Deserialize<List<Yonetici>>(jsonVerileri);
-
-            yoneticiler.AddRange(okunanVeriler);
-
-            return yoneticiler;
-        }
     }
 }
 

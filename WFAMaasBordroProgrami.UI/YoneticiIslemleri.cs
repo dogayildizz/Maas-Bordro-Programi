@@ -34,12 +34,12 @@ namespace WFAMaasBordroProgrami.UI
 
             //Listedeki kişi güncellendi.
 
-            JsonDosya.YoneticiYaz(yoneticiler);
+            JsonDosya.Yaz(yoneticiler, "yonetici.json");
 
         }
         public void DataGridViewGuncelle()
         {
-            yoneticiler = JsonDosya.YoneticiOku();
+            yoneticiler = JsonDosya.Oku<Yonetici>("yonetici.json");
             dgvYoneticiler.DataSource = null;
             dgvYoneticiler.DataSource = yoneticiler;
 
@@ -55,7 +55,7 @@ namespace WFAMaasBordroProgrami.UI
                 CalismaSaati = uint.Parse(txtYoneticiCalismaSaati.Text)
             };
             yoneticiler.Add(yonetici);
-            JsonDosya.YoneticiYaz(yoneticiler);
+            JsonDosya.Yaz(yoneticiler, "yonetici.json");
         }
         public void ListeVeJsonSil()
         {
@@ -71,7 +71,7 @@ namespace WFAMaasBordroProgrami.UI
                     yoneticiler.RemoveAt(i);
                 }
             }
-            JsonDosya.YoneticiYaz(yoneticiler);
+            JsonDosya.Yaz(yoneticiler,"yonetici.json");
         }
         public void Temizle()
         {

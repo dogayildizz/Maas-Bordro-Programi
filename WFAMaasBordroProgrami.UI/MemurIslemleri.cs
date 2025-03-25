@@ -32,7 +32,7 @@ namespace WFAMaasBordroProgrami.UI
                 MemurunDerecesi = (MemurDerecesi)cmbMemurDerece.SelectedItem
             };
             memurlar.Add(memur);
-            JsonDosya.MemurYaz(memurlar);
+            JsonDosya.Yaz(memurlar,"memur.json");
         }
         public void ListeVeJsonSil()
         {
@@ -46,7 +46,7 @@ namespace WFAMaasBordroProgrami.UI
                     memurlar.RemoveAt(i);
                 }
             }
-            JsonDosya.MemurYaz(memurlar);
+            JsonDosya.Yaz(memurlar,"memur.json");
         }
         public void ListeVeJsonGuncelle()
         {
@@ -66,7 +66,7 @@ namespace WFAMaasBordroProgrami.UI
 
             //Listedeki kişi güncellendi.
 
-            JsonDosya.MemurYaz(memurlar);
+            JsonDosya.Yaz(memurlar, "memur.json");
 
         }
         private void dgvMemurlar_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -85,7 +85,7 @@ namespace WFAMaasBordroProgrami.UI
         }
         public void DataGridViewGuncelle()
         {
-            memurlar = JsonDosya.MemurOku();
+            memurlar = JsonDosya.Oku<Memur>("memur.json");
             dgvMemurlar.DataSource = null;
             dgvMemurlar.DataSource = memurlar;
 

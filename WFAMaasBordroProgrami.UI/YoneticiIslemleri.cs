@@ -1,4 +1,5 @@
-﻿using CLMaasBordro.Data;
+﻿using CLMaasBordro;
+using CLMaasBordro.Data;
 using CLMaasBordro.Enum;
 using CLMaasBordro.Models;
 using System;
@@ -110,6 +111,7 @@ namespace WFAMaasBordroProgrami.UI
                 MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
                 return;
             }
+
             ListeVeJsonEkle();
             DataGridViewGuncelle();
             Temizle();

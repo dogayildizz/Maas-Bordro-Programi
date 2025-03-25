@@ -36,8 +36,8 @@ namespace WFAMaasBordroProgrami.UI
 
         private void BireyselBordro_Load(object sender, EventArgs e)
         {
-            memurlar = JsonDosya.MemurOku();
-            yoneticiler = JsonDosya.YoneticiOku();
+            memurlar = JsonDosya.Oku<Memur>("memur.json");
+            yoneticiler = JsonDosya.Oku<Yonetici>("yonetici.json");
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Items.Add("Memur");
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Items.Add("Yönetici");
             ListViewBasliklariOlustur();
@@ -79,9 +79,9 @@ namespace WFAMaasBordroProgrami.UI
                     return;
                 }
             }
-            foreach(Yonetici yonetici in yoneticiler)
+            foreach (Yonetici yonetici in yoneticiler)
             {
-                if(cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == yonetici.AdSoyad)
+                if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == yonetici.AdSoyad)
                 {
                     ListViewItem listViewItem = new ListViewItem(yonetici.AdSoyad);
                     listViewItem.SubItems.Add(yonetici.CalismaSaati.ToString());
@@ -99,7 +99,12 @@ namespace WFAMaasBordroProgrami.UI
         {
 
 
-            
+
+        }
+
+        private void btnBireyselMailGonder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -93,6 +93,8 @@ namespace WFAMaasBordroProgrami.UI
             dgvMemurlar.Columns["SaatlikUcret"].Visible = false;
             dgvMemurlar.Columns["AnaKazanc"].Visible = false;
 
+
+
         }
         public void Temizle()
         {

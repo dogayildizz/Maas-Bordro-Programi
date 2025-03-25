@@ -38,17 +38,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             cmbBordrosuGoruntulenmekIstenenPersonel = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnBordroGoruntule = new Guna.UI2.WinForms.Guna2Button();
             lvBireyselBordro = new ListView();
-            btnBireyselExcelOlustur = new Guna.UI2.WinForms.Guna2Button();
-            btnBireyselPdfOlustur = new Guna.UI2.WinForms.Guna2Button();
             btnBireyselMailGonder = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbBordrosuGoruntulenmekIstenenPersonelTuru = new Guna.UI2.WinForms.Guna2ComboBox();
+            txtGonderilecekMailAdresi = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
             // 
             // cmbBordrosuGoruntulenmekIstenenPersonel
@@ -108,46 +105,10 @@
             lvBireyselBordro.TabIndex = 6;
             lvBireyselBordro.UseCompatibleStateImageBehavior = false;
             // 
-            // btnBireyselExcelOlustur
-            // 
-            btnBireyselExcelOlustur.BackColor = Color.FromArgb(66, 84, 94);
-            btnBireyselExcelOlustur.CustomizableEdges = customizableEdges5;
-            btnBireyselExcelOlustur.DisabledState.BorderColor = Color.DarkGray;
-            btnBireyselExcelOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBireyselExcelOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBireyselExcelOlustur.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBireyselExcelOlustur.FillColor = Color.FromArgb(66, 84, 94);
-            btnBireyselExcelOlustur.Font = new Font("Segoe UI", 9F);
-            btnBireyselExcelOlustur.ForeColor = Color.White;
-            btnBireyselExcelOlustur.Location = new Point(561, 412);
-            btnBireyselExcelOlustur.Name = "btnBireyselExcelOlustur";
-            btnBireyselExcelOlustur.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnBireyselExcelOlustur.Size = new Size(225, 56);
-            btnBireyselExcelOlustur.TabIndex = 5;
-            btnBireyselExcelOlustur.Text = "Excel Oluştur";
-            // 
-            // btnBireyselPdfOlustur
-            // 
-            btnBireyselPdfOlustur.BackColor = Color.FromArgb(66, 84, 94);
-            btnBireyselPdfOlustur.CustomizableEdges = customizableEdges7;
-            btnBireyselPdfOlustur.DisabledState.BorderColor = Color.DarkGray;
-            btnBireyselPdfOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBireyselPdfOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBireyselPdfOlustur.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBireyselPdfOlustur.FillColor = Color.FromArgb(66, 84, 94);
-            btnBireyselPdfOlustur.Font = new Font("Segoe UI", 9F);
-            btnBireyselPdfOlustur.ForeColor = Color.White;
-            btnBireyselPdfOlustur.Location = new Point(187, 412);
-            btnBireyselPdfOlustur.Name = "btnBireyselPdfOlustur";
-            btnBireyselPdfOlustur.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnBireyselPdfOlustur.Size = new Size(225, 56);
-            btnBireyselPdfOlustur.TabIndex = 5;
-            btnBireyselPdfOlustur.Text = "PDF Oluştur";
-            // 
             // btnBireyselMailGonder
             // 
             btnBireyselMailGonder.BackColor = Color.FromArgb(66, 84, 94);
-            btnBireyselMailGonder.CustomizableEdges = customizableEdges9;
+            btnBireyselMailGonder.CustomizableEdges = customizableEdges5;
             btnBireyselMailGonder.DisabledState.BorderColor = Color.DarkGray;
             btnBireyselMailGonder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBireyselMailGonder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -157,10 +118,11 @@
             btnBireyselMailGonder.ForeColor = Color.White;
             btnBireyselMailGonder.Location = new Point(905, 412);
             btnBireyselMailGonder.Name = "btnBireyselMailGonder";
-            btnBireyselMailGonder.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnBireyselMailGonder.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnBireyselMailGonder.Size = new Size(225, 56);
             btnBireyselMailGonder.TabIndex = 5;
             btnBireyselMailGonder.Text = "Mail Gönder";
+            btnBireyselMailGonder.Click += btnBireyselMailGonder_Click;
             // 
             // guna2HtmlLabel1
             // 
@@ -176,7 +138,7 @@
             // cmbBordrosuGoruntulenmekIstenenPersonelTuru
             // 
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.BackColor = Color.Transparent;
-            cmbBordrosuGoruntulenmekIstenenPersonelTuru.CustomizableEdges = customizableEdges11;
+            cmbBordrosuGoruntulenmekIstenenPersonelTuru.CustomizableEdges = customizableEdges7;
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.DrawMode = DrawMode.OwnerDrawFixed;
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -186,20 +148,39 @@
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.ItemHeight = 30;
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Location = new Point(187, 80);
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Name = "cmbBordrosuGoruntulenmekIstenenPersonelTuru";
-            cmbBordrosuGoruntulenmekIstenenPersonelTuru.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cmbBordrosuGoruntulenmekIstenenPersonelTuru.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Size = new Size(509, 36);
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.TabIndex = 4;
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedIndexChanged += cmbBordrosuGoruntulenmekIstenenPersonelTuru_SelectedIndexChanged;
+            // 
+            // txtGonderilecekMailAdresi
+            // 
+            txtGonderilecekMailAdresi.CustomizableEdges = customizableEdges9;
+            txtGonderilecekMailAdresi.DefaultText = "example@gmail.com";
+            txtGonderilecekMailAdresi.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtGonderilecekMailAdresi.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtGonderilecekMailAdresi.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtGonderilecekMailAdresi.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtGonderilecekMailAdresi.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtGonderilecekMailAdresi.Font = new Font("Segoe UI", 9F);
+            txtGonderilecekMailAdresi.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtGonderilecekMailAdresi.Location = new Point(501, 422);
+            txtGonderilecekMailAdresi.Margin = new Padding(3, 4, 3, 4);
+            txtGonderilecekMailAdresi.Name = "txtGonderilecekMailAdresi";
+            txtGonderilecekMailAdresi.PlaceholderText = "";
+            txtGonderilecekMailAdresi.SelectedText = "";
+            txtGonderilecekMailAdresi.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtGonderilecekMailAdresi.Size = new Size(351, 36);
+            txtGonderilecekMailAdresi.TabIndex = 7;
             // 
             // BireyselBordro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1368, 532);
+            Controls.Add(txtGonderilecekMailAdresi);
             Controls.Add(lvBireyselBordro);
-            Controls.Add(btnBireyselPdfOlustur);
             Controls.Add(btnBireyselMailGonder);
-            Controls.Add(btnBireyselExcelOlustur);
             Controls.Add(btnBordroGoruntule);
             Controls.Add(cmbBordrosuGoruntulenmekIstenenPersonelTuru);
             Controls.Add(guna2HtmlLabel1);
@@ -219,10 +200,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button btnBordroGoruntule;
         private ListView lvBireyselBordro;
-        private Guna.UI2.WinForms.Guna2Button btnBireyselExcelOlustur;
-        private Guna.UI2.WinForms.Guna2Button btnBireyselPdfOlustur;
         private Guna.UI2.WinForms.Guna2Button btnBireyselMailGonder;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbBordrosuGoruntulenmekIstenenPersonelTuru;
+        private Guna.UI2.WinForms.Guna2TextBox txtGonderilecekMailAdresi;
     }
 }

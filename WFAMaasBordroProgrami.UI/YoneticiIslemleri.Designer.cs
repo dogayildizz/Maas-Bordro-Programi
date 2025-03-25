@@ -73,13 +73,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvYoneticiler.DefaultCellStyle = dataGridViewCellStyle3;
             dgvYoneticiler.GridColor = Color.FromArgb(231, 229, 255);
-            dgvYoneticiler.Location = new Point(68, 223);
+            dgvYoneticiler.Location = new Point(68, 244);
             dgvYoneticiler.MultiSelect = false;
             dgvYoneticiler.Name = "dgvYoneticiler";
             dgvYoneticiler.ReadOnly = true;
             dgvYoneticiler.RowHeadersVisible = false;
             dgvYoneticiler.RowHeadersWidth = 51;
-            dgvYoneticiler.Size = new Size(1204, 265);
+            dgvYoneticiler.Size = new Size(1204, 244);
             dgvYoneticiler.TabIndex = 23;
             dgvYoneticiler.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvYoneticiler.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -109,7 +109,7 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             guna2HtmlLabel3.ForeColor = Color.Black;
-            guna2HtmlLabel3.Location = new Point(68, 12);
+            guna2HtmlLabel3.Location = new Point(77, 36);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(134, 25);
             guna2HtmlLabel3.TabIndex = 25;
@@ -120,7 +120,7 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 10.2F);
             guna2HtmlLabel4.ForeColor = Color.Black;
-            guna2HtmlLabel4.Location = new Point(68, 107);
+            guna2HtmlLabel4.Location = new Point(77, 131);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(166, 25);
             guna2HtmlLabel4.TabIndex = 26;
@@ -131,7 +131,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 10.2F);
             guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(494, 12);
+            guna2HtmlLabel2.Location = new Point(514, 36);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(48, 25);
             guna2HtmlLabel2.TabIndex = 27;
@@ -148,7 +148,7 @@
             txtYoneticiAdSoyad.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtYoneticiAdSoyad.Font = new Font("Microsoft Sans Serif", 10.2F);
             txtYoneticiAdSoyad.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtYoneticiAdSoyad.Location = new Point(68, 44);
+            txtYoneticiAdSoyad.Location = new Point(77, 68);
             txtYoneticiAdSoyad.Margin = new Padding(4);
             txtYoneticiAdSoyad.Name = "txtYoneticiAdSoyad";
             txtYoneticiAdSoyad.PlaceholderText = "";
@@ -168,7 +168,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Microsoft Sans Serif", 10.2F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(494, 44);
+            guna2TextBox1.Location = new Point(514, 68);
             guna2TextBox1.Margin = new Padding(4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
@@ -188,7 +188,7 @@
             txtYoneticiCalismaSaati.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtYoneticiCalismaSaati.Font = new Font("Microsoft Sans Serif", 10.2F);
             txtYoneticiCalismaSaati.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtYoneticiCalismaSaati.Location = new Point(68, 139);
+            txtYoneticiCalismaSaati.Location = new Point(77, 163);
             txtYoneticiCalismaSaati.Margin = new Padding(4);
             txtYoneticiCalismaSaati.Name = "txtYoneticiCalismaSaati";
             txtYoneticiCalismaSaati.PlaceholderText = "";

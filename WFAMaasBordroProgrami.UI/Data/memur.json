@@ -1,9 +1,16 @@
 [
   {
     "Kadro": "Memur",
-    "AnaKazanc": 106000,
+    "AnaKazanc": 10600,
     "MemurunDerecesi": 2,
     "AdSoyad": "Merve Mihmano\u011Flu",
-    "CalismaSaati": 200
+    "CalismaSaati": 20
+  },
+  {
+    "Kadro": "Memur",
+    "AnaKazanc": 28500,
+    "MemurunDerecesi": 0,
+    "AdSoyad": "Talha Din",
+    "CalismaSaati": 50
   }
 ]

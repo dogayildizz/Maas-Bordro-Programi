@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lvTumCalisanlarinBordrosu = new ListView();
             btnPdfOlustur = new Guna.UI2.WinForms.Guna2Button();
-            btnMailGonder = new Guna.UI2.WinForms.Guna2Button();
             btnExcelOlustur = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
@@ -51,7 +48,7 @@
             // btnPdfOlustur
             // 
             btnPdfOlustur.BackColor = Color.FromArgb(66, 84, 94);
-            btnPdfOlustur.CustomizableEdges = customizableEdges13;
+            btnPdfOlustur.CustomizableEdges = customizableEdges1;
             btnPdfOlustur.DisabledState.BorderColor = Color.DarkGray;
             btnPdfOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPdfOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -59,35 +56,18 @@
             btnPdfOlustur.FillColor = Color.FromArgb(66, 84, 94);
             btnPdfOlustur.Font = new Font("Segoe UI", 9F);
             btnPdfOlustur.ForeColor = Color.White;
-            btnPdfOlustur.Location = new Point(242, 426);
+            btnPdfOlustur.Location = new Point(330, 426);
             btnPdfOlustur.Name = "btnPdfOlustur";
-            btnPdfOlustur.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnPdfOlustur.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPdfOlustur.Size = new Size(225, 56);
             btnPdfOlustur.TabIndex = 7;
             btnPdfOlustur.Text = "PDF Oluştur";
-            // 
-            // btnMailGonder
-            // 
-            btnMailGonder.BackColor = Color.FromArgb(66, 84, 94);
-            btnMailGonder.CustomizableEdges = customizableEdges15;
-            btnMailGonder.DisabledState.BorderColor = Color.DarkGray;
-            btnMailGonder.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnMailGonder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnMailGonder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMailGonder.FillColor = Color.FromArgb(66, 84, 94);
-            btnMailGonder.Font = new Font("Segoe UI", 9F);
-            btnMailGonder.ForeColor = Color.White;
-            btnMailGonder.Location = new Point(861, 426);
-            btnMailGonder.Name = "btnMailGonder";
-            btnMailGonder.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnMailGonder.Size = new Size(225, 56);
-            btnMailGonder.TabIndex = 8;
-            btnMailGonder.Text = "Mail Gönder";
+            btnPdfOlustur.Click += btnPdfOlustur_Click;
             // 
             // btnExcelOlustur
             // 
             btnExcelOlustur.BackColor = Color.FromArgb(66, 84, 94);
-            btnExcelOlustur.CustomizableEdges = customizableEdges17;
+            btnExcelOlustur.CustomizableEdges = customizableEdges3;
             btnExcelOlustur.DisabledState.BorderColor = Color.DarkGray;
             btnExcelOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcelOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -95,12 +75,13 @@
             btnExcelOlustur.FillColor = Color.FromArgb(66, 84, 94);
             btnExcelOlustur.Font = new Font("Segoe UI", 9F);
             btnExcelOlustur.ForeColor = Color.White;
-            btnExcelOlustur.Location = new Point(541, 426);
+            btnExcelOlustur.Location = new Point(768, 426);
             btnExcelOlustur.Name = "btnExcelOlustur";
-            btnExcelOlustur.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnExcelOlustur.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnExcelOlustur.Size = new Size(225, 56);
             btnExcelOlustur.TabIndex = 9;
             btnExcelOlustur.Text = "Excel Oluştur";
+            btnExcelOlustur.Click += btnExcelOlustur_Click;
             // 
             // TumCalisanlarinBordrosu
             // 
@@ -109,7 +90,6 @@
             ClientSize = new Size(1368, 532);
             Controls.Add(lvTumCalisanlarinBordrosu);
             Controls.Add(btnPdfOlustur);
-            Controls.Add(btnMailGonder);
             Controls.Add(btnExcelOlustur);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TumCalisanlarinBordrosu";
@@ -122,7 +102,6 @@
 
         private ListView lvTumCalisanlarinBordrosu;
         private Guna.UI2.WinForms.Guna2Button btnPdfOlustur;
-        private Guna.UI2.WinForms.Guna2Button btnMailGonder;
         private Guna.UI2.WinForms.Guna2Button btnExcelOlustur;
     }
 }

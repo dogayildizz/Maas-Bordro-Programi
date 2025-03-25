@@ -61,5 +61,9 @@ namespace WFAMaasBordroProgrami.UI
 
         #endregion
 
+        private void btnFormuAltaAt_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

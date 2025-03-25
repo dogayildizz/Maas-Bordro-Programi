@@ -32,6 +32,7 @@ namespace WFAMaasBordroProgrami.UI
             memurlar = JsonDosya.Oku<Memur>("memur.json");
             yoneticiler = JsonDosya.Oku<Yonetici>("yonetici.json");
 
+
             lvTumCalisanlarinBordrosu.View = View.Details;  //.View öğelerin nasıl gösterileceğini belirler. View.Details detaylı görünüm demek
             lvTumCalisanlarinBordrosu.GridLines = true;  //satır ve sütun aralarındaki çizgilerin görünürlüğünü aktif ettik.
             lvTumCalisanlarinBordrosu.Columns.Add("Personel Adı Soyadı", 220, HorizontalAlignment.Center); //sütun ekledik : (sütunun başlığı, sütunun genişliği)
@@ -49,6 +50,13 @@ namespace WFAMaasBordroProgrami.UI
                 listViewItem.SubItems.Add(memur.AnaKazanc.ToString("C2"));
                 listViewItem.SubItems.Add(memur.EkKazanc.ToString("C2"));
                 listViewItem.SubItems.Add(memur.ToplamMaasHesapla().ToString("C2"));
+
+                // Çalışma saati 150'den düşükse, satırın rengini kırmızı yap
+                if (memur.CalismaSaati < 150)
+                {
+                    listViewItem.BackColor = Color.LightSteelBlue;
+                }
+
                 lvTumCalisanlarinBordrosu.Items.Add(listViewItem);
             }
             foreach (Yonetici yonetici in yoneticiler)
@@ -60,6 +68,13 @@ namespace WFAMaasBordroProgrami.UI
                 listViewItem.SubItems.Add(yonetici.AnaKazanc.ToString("C2"));
                 listViewItem.SubItems.Add(yonetici.EkKazanc.ToString("C2"));
                 listViewItem.SubItems.Add(yonetici.ToplamMaasHesapla().ToString("C2"));
+
+                // Çalışma saati 150'den düşükse, satırın rengini kırmızı yap
+                if (yonetici.CalismaSaati < 150)
+                {
+                    listViewItem.BackColor = Color.Silver;
+                }
+
                 lvTumCalisanlarinBordrosu.Items.Add(listViewItem);
             }
         }
@@ -169,5 +184,7 @@ namespace WFAMaasBordroProgrami.UI
 
 
         }
+
+
     }
 }

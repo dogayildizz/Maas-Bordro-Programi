@@ -54,17 +54,17 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvYoneticiler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;  //
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText; //
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvYoneticiler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvYoneticiler.ColumnHeadersHeight = 40;
             dgvYoneticiler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);

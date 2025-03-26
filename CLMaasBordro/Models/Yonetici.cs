@@ -26,7 +26,6 @@ namespace CLMaasBordro.Data
                 return SaatlikUcret*CalismaSaati; 
             }
         }
-        [JsonIgnore]
         public override decimal SaatlikUcret
         {
             get

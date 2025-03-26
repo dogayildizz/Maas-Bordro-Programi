@@ -72,7 +72,7 @@ namespace WFAMaasBordroProgrami.UI
                 // Çalışma saati 150'den düşükse, satırın rengini kırmızı yap
                 if (yonetici.CalismaSaati < 150)
                 {
-                    listViewItem.BackColor = Color.Silver;
+                    listViewItem.BackColor = Color.LightSteelBlue;
                 }
 
                 lvTumCalisanlarinBordrosu.Items.Add(listViewItem);
@@ -185,6 +185,9 @@ namespace WFAMaasBordroProgrami.UI
 
         }
 
+        private void btnJsonKlasorOlustur_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,8 +42,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlMenu = new Panel();
-            btnYoneticiIslemleriFormunuGetir = new Guna.UI2.WinForms.Guna2GradientButton();
+            pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            btnYoneticiIslemleriFormunuGetir = new Guna.UI2.WinForms.Guna2GradientButton();
             btnMemurIslemleriFormunuGetir = new Guna.UI2.WinForms.Guna2GradientButton();
             btnBireyselBordroFormunuGetir = new Guna.UI2.WinForms.Guna2GradientButton();
             btnFormuAltaAt = new Guna.UI2.WinForms.Guna2Button();
@@ -51,14 +52,16 @@
             btnProgramiKapat = new Guna.UI2.WinForms.Guna2Button();
             pnlIcerik = new Panel();
             pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(13, 27, 42);
-            pnlMenu.Controls.Add(btnYoneticiIslemleriFormunuGetir);
+            pnlMenu.Controls.Add(pictureBox2);
             pnlMenu.Controls.Add(pictureBox1);
+            pnlMenu.Controls.Add(btnYoneticiIslemleriFormunuGetir);
             pnlMenu.Controls.Add(btnMemurIslemleriFormunuGetir);
             pnlMenu.Controls.Add(btnBireyselBordroFormunuGetir);
             pnlMenu.Controls.Add(btnFormuAltaAt);
@@ -70,6 +73,26 @@
             pnlMenu.Size = new Size(1368, 213);
             pnlMenu.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(196, 23);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(379, 119);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(38, 23);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(166, 152);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // btnYoneticiIslemleriFormunuGetir
             // 
             btnYoneticiIslemleriFormunuGetir.CustomizableEdges = customizableEdges1;
@@ -80,7 +103,7 @@
             btnYoneticiIslemleriFormunuGetir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnYoneticiIslemleriFormunuGetir.FillColor = Color.FromArgb(13, 27, 42);
             btnYoneticiIslemleriFormunuGetir.FillColor2 = Color.FromArgb(13, 27, 42);
-            btnYoneticiIslemleriFormunuGetir.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnYoneticiIslemleriFormunuGetir.Font = new Font("Arial", 12F, FontStyle.Bold);
             btnYoneticiIslemleriFormunuGetir.ForeColor = Color.White;
             btnYoneticiIslemleriFormunuGetir.Location = new Point(507, 152);
             btnYoneticiIslemleriFormunuGetir.Name = "btnYoneticiIslemleriFormunuGetir";
@@ -89,16 +112,6 @@
             btnYoneticiIslemleriFormunuGetir.TabIndex = 5;
             btnYoneticiIslemleriFormunuGetir.Text = "Yönetici İşlemleri";
             btnYoneticiIslemleriFormunuGetir.Click += btnYoneticiIslemleriFormunuGetir_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(214, 216);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // btnMemurIslemleriFormunuGetir
             // 
@@ -112,7 +125,7 @@
             btnMemurIslemleriFormunuGetir.FillColor2 = Color.FromArgb(13, 27, 42);
             btnMemurIslemleriFormunuGetir.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             btnMemurIslemleriFormunuGetir.ForeColor = Color.White;
-            btnMemurIslemleriFormunuGetir.Location = new Point(219, 152);
+            btnMemurIslemleriFormunuGetir.Location = new Point(228, 154);
             btnMemurIslemleriFormunuGetir.Name = "btnMemurIslemleriFormunuGetir";
             btnMemurIslemleriFormunuGetir.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnMemurIslemleriFormunuGetir.Size = new Size(285, 59);
@@ -130,7 +143,7 @@
             btnBireyselBordroFormunuGetir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnBireyselBordroFormunuGetir.FillColor = Color.FromArgb(13, 27, 42);
             btnBireyselBordroFormunuGetir.FillColor2 = Color.FromArgb(13, 27, 42);
-            btnBireyselBordroFormunuGetir.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnBireyselBordroFormunuGetir.Font = new Font("Arial", 12F, FontStyle.Bold);
             btnBireyselBordroFormunuGetir.ForeColor = Color.White;
             btnBireyselBordroFormunuGetir.Location = new Point(795, 152);
             btnBireyselBordroFormunuGetir.Name = "btnBireyselBordroFormunuGetir";
@@ -168,7 +181,7 @@
             btnTumCalisanlarinBordrosu.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnTumCalisanlarinBordrosu.FillColor = Color.FromArgb(13, 27, 42);
             btnTumCalisanlarinBordrosu.FillColor2 = Color.FromArgb(13, 27, 42);
-            btnTumCalisanlarinBordrosu.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            btnTumCalisanlarinBordrosu.Font = new Font("Arial", 12F, FontStyle.Bold);
             btnTumCalisanlarinBordrosu.ForeColor = Color.White;
             btnTumCalisanlarinBordrosu.Location = new Point(1081, 153);
             btnTumCalisanlarinBordrosu.Name = "btnTumCalisanlarinBordrosu";
@@ -220,6 +233,7 @@
             Text = "Ana Menü";
             Load += frmAnaMenu_Load;
             pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -235,5 +249,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnMemurIslemleriFormunuGetir;
         private Guna.UI2.WinForms.Guna2Button btnFormuAltaAt;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

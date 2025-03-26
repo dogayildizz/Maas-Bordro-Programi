@@ -1,12 +1,15 @@
 ﻿using CLMaasBordro.Abstract;
 using CLMaasBordro.Data;
 using CLMaasBordro.Models;
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -104,7 +107,85 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnBireyselMailGonder_Click(object sender, EventArgs e)
         {
+            string gonderimYapilacakMailAdresi = txtGonderilecekMailAdresi.Text;
+            if (!gonderimYapilacakMailAdresi.EndsWith("@gmail.com"))
+            {
+                MessageBox.Show("Yalnızca gmail uzantılı mail adresi girmelisiniz!");
+                txtGonderilecekMailAdresi.Text = "example@gmail.com";
+                return;
+            }
 
+            try
+            {
+                string excelDosyaYolu = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Bordro.xlsx");
+                using (var workbook = new XLWorkbook())
+                {
+                    var worksheet = workbook.Worksheets.Add("Bireysel Bordro");
+                    for (int col = 0; col < lvBireyselBordro.Columns.Count; col++)
+                    {
+                        worksheet.Cell(1, col + 1).Value = lvBireyselBordro.Columns[col].Text;
+                    }
+                    int row = 2;
+                    foreach (ListViewItem item in lvBireyselBordro.Items)
+                    {
+                        for (int i = 0; i < item.SubItems.Count; i++)
+                        {
+                            worksheet.Cell(row, i + 1).Value = item.SubItems[i].Text;
+                        }
+                        row++;
+                    }
+                    workbook.SaveAs(excelDosyaYolu);
+                }
+                MailMessage mailMessage = new MailMessage();
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
+
+                mailMessage.From = new MailAddress("dogayildizyzl@gmail.com");  //gönderen kişinin mail adresi
+                mailMessage.To.Add(txtGonderilecekMailAdresi.Text);  //gönderdiğim kişinin mail adresi
+                mailMessage.Subject = "Bireysel Bordro";
+                mailMessage.Body = "Merhaba, iyi çalışmalar. \nEkteki dosya bireysel bordronuzdur.";
+
+                mailMessage.Attachments.Add(new Attachment(excelDosyaYolu));
+
+                smtpClient.Port = 587;
+                smtpClient.Credentials = new NetworkCredential("dogayildizyzl@gmail.com", "rrfnaejkrnpkwwlq"); //gönderen eposta, uygulama şifresi google hesaplardan
+                smtpClient.EnableSsl = true;
+                smtpClient.Send(mailMessage);
+                MessageBox.Show("E posta başarıyla gönderildi!");
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnBireyselJsonOlustur_Click(object sender, EventArgs e)
+        {
+            if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Memur")
+            {
+                foreach (Memur memur in memurlar)
+                {
+                    if(cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == memur.AdSoyad)
+                    {
+                        MaasBordro.JsonYaz(memur,memur.AdSoyad);
+                    }
+
+                }
+
+            }
+            if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Yönetici")
+            {
+                foreach (Yonetici yonetici in yoneticiler)
+                {
+                    if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == yonetici.AdSoyad)
+                    {
+                        MaasBordro.JsonYaz(yonetici, yonetici.AdSoyad);
+                    }
+
+                }
+
+            }
         }
     }
 }

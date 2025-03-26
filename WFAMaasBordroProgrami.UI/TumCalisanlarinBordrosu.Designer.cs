@@ -35,13 +35,14 @@
             lvTumCalisanlarinBordrosu = new ListView();
             btnPdfOlustur = new Guna.UI2.WinForms.Guna2Button();
             btnExcelOlustur = new Guna.UI2.WinForms.Guna2Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lvTumCalisanlarinBordrosu
             // 
             lvTumCalisanlarinBordrosu.Location = new Point(120, 39);
             lvTumCalisanlarinBordrosu.Name = "lvTumCalisanlarinBordrosu";
-            lvTumCalisanlarinBordrosu.Size = new Size(1126, 369);
+            lvTumCalisanlarinBordrosu.Size = new Size(1126, 342);
             lvTumCalisanlarinBordrosu.TabIndex = 10;
             lvTumCalisanlarinBordrosu.UseCompatibleStateImageBehavior = false;
             // 
@@ -56,7 +57,7 @@
             btnPdfOlustur.FillColor = Color.FromArgb(66, 84, 94);
             btnPdfOlustur.Font = new Font("Segoe UI", 9F);
             btnPdfOlustur.ForeColor = Color.White;
-            btnPdfOlustur.Location = new Point(330, 426);
+            btnPdfOlustur.Location = new Point(771, 426);
             btnPdfOlustur.Name = "btnPdfOlustur";
             btnPdfOlustur.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPdfOlustur.Size = new Size(225, 56);
@@ -75,7 +76,7 @@
             btnExcelOlustur.FillColor = Color.FromArgb(66, 84, 94);
             btnExcelOlustur.Font = new Font("Segoe UI", 9F);
             btnExcelOlustur.ForeColor = Color.White;
-            btnExcelOlustur.Location = new Point(768, 426);
+            btnExcelOlustur.Location = new Point(1021, 426);
             btnExcelOlustur.Name = "btnExcelOlustur";
             btnExcelOlustur.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnExcelOlustur.Size = new Size(225, 56);
@@ -83,11 +84,21 @@
             btnExcelOlustur.Text = "Excel Oluştur";
             btnExcelOlustur.Click += btnExcelOlustur_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(120, 384);
+            label1.Name = "label1";
+            label1.Size = new Size(407, 20);
+            label1.TabIndex = 11;
+            label1.Text = "150 saatten az çalışan personeller mavi renk ile belirtilmiştir!";
+            // 
             // TumCalisanlarinBordrosu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1368, 532);
+            Controls.Add(label1);
             Controls.Add(lvTumCalisanlarinBordrosu);
             Controls.Add(btnPdfOlustur);
             Controls.Add(btnExcelOlustur);
@@ -96,6 +107,7 @@
             Text = "TumCalisanlarinBordrosu";
             Load += TumCalisanlarinBordrosu_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -103,5 +115,6 @@
         private ListView lvTumCalisanlarinBordrosu;
         private Guna.UI2.WinForms.Guna2Button btnPdfOlustur;
         private Guna.UI2.WinForms.Guna2Button btnExcelOlustur;
+        private Label label1;
     }
 }

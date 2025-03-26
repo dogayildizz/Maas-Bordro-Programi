@@ -58,8 +58,8 @@
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;  //
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText; //
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvYoneticiler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvYoneticiler.ColumnHeadersHeight = 40;

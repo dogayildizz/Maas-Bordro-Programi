@@ -13,7 +13,6 @@ namespace CLMaasBordro.Data
     {
 
         public override string Kadro { get; } = "Memur";
-        [JsonIgnore]
         public decimal EkKazanc
         {
             get 
@@ -37,7 +36,6 @@ namespace CLMaasBordro.Data
             }
         }
         public MemurDerecesi MemurunDerecesi { get; set; }
-        [JsonIgnore]
         public override decimal SaatlikUcret
         {
             get

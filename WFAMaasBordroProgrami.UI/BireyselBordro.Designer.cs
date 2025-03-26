@@ -49,6 +49,7 @@
             cmbBordrosuGoruntulenmekIstenenPersonelTuru = new Guna.UI2.WinForms.Guna2ComboBox();
             txtGonderilecekMailAdresi = new Guna.UI2.WinForms.Guna2TextBox();
             btnBireyselJsonOlustur = new Guna.UI2.WinForms.Guna2Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // cmbBordrosuGoruntulenmekIstenenPersonel
@@ -62,7 +63,7 @@
             cmbBordrosuGoruntulenmekIstenenPersonel.Font = new Font("Segoe UI", 10F);
             cmbBordrosuGoruntulenmekIstenenPersonel.ForeColor = Color.FromArgb(68, 88, 112);
             cmbBordrosuGoruntulenmekIstenenPersonel.ItemHeight = 30;
-            cmbBordrosuGoruntulenmekIstenenPersonel.Location = new Point(187, 164);
+            cmbBordrosuGoruntulenmekIstenenPersonel.Location = new Point(219, 223);
             cmbBordrosuGoruntulenmekIstenenPersonel.Name = "cmbBordrosuGoruntulenmekIstenenPersonel";
             cmbBordrosuGoruntulenmekIstenenPersonel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbBordrosuGoruntulenmekIstenenPersonel.Size = new Size(509, 36);
@@ -74,7 +75,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 10.2F);
             guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(187, 132);
+            guna2HtmlLabel2.Location = new Point(219, 191);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(414, 25);
             guna2HtmlLabel2.TabIndex = 3;
@@ -91,7 +92,7 @@
             btnBordroGoruntule.FillColor = Color.FromArgb(66, 84, 94);
             btnBordroGoruntule.Font = new Font("Segoe UI", 9F);
             btnBordroGoruntule.ForeColor = Color.White;
-            btnBordroGoruntule.Location = new Point(905, 144);
+            btnBordroGoruntule.Location = new Point(938, 203);
             btnBordroGoruntule.Name = "btnBordroGoruntule";
             btnBordroGoruntule.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnBordroGoruntule.Size = new Size(225, 56);
@@ -101,10 +102,11 @@
             // 
             // lvBireyselBordro
             // 
+            lvBireyselBordro.Enabled = false;
             lvBireyselBordro.Font = new Font("Segoe UI", 12F);
-            lvBireyselBordro.Location = new Point(187, 229);
+            lvBireyselBordro.Location = new Point(219, 288);
             lvBireyselBordro.Name = "lvBireyselBordro";
-            lvBireyselBordro.Size = new Size(943, 151);
+            lvBireyselBordro.Size = new Size(944, 75);
             lvBireyselBordro.TabIndex = 6;
             lvBireyselBordro.UseCompatibleStateImageBehavior = false;
             // 
@@ -119,7 +121,7 @@
             btnBireyselMailGonder.FillColor = Color.FromArgb(66, 84, 94);
             btnBireyselMailGonder.Font = new Font("Segoe UI", 9F);
             btnBireyselMailGonder.ForeColor = Color.White;
-            btnBireyselMailGonder.Location = new Point(797, 412);
+            btnBireyselMailGonder.Location = new Point(688, 411);
             btnBireyselMailGonder.Name = "btnBireyselMailGonder";
             btnBireyselMailGonder.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnBireyselMailGonder.Size = new Size(225, 56);
@@ -132,7 +134,7 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 10.2F);
             guna2HtmlLabel1.ForeColor = Color.Black;
-            guna2HtmlLabel1.Location = new Point(187, 48);
+            guna2HtmlLabel1.Location = new Point(219, 107);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(509, 25);
             guna2HtmlLabel1.TabIndex = 3;
@@ -149,7 +151,7 @@
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Font = new Font("Segoe UI", 10F);
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.ForeColor = Color.FromArgb(68, 88, 112);
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.ItemHeight = 30;
-            cmbBordrosuGoruntulenmekIstenenPersonelTuru.Location = new Point(187, 80);
+            cmbBordrosuGoruntulenmekIstenenPersonelTuru.Location = new Point(219, 139);
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Name = "cmbBordrosuGoruntulenmekIstenenPersonelTuru";
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbBordrosuGoruntulenmekIstenenPersonelTuru.Size = new Size(509, 36);
@@ -167,7 +169,7 @@
             txtGonderilecekMailAdresi.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtGonderilecekMailAdresi.Font = new Font("Segoe UI", 9F);
             txtGonderilecekMailAdresi.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtGonderilecekMailAdresi.Location = new Point(411, 423);
+            txtGonderilecekMailAdresi.Location = new Point(302, 422);
             txtGonderilecekMailAdresi.Margin = new Padding(3, 4, 3, 4);
             txtGonderilecekMailAdresi.Name = "txtGonderilecekMailAdresi";
             txtGonderilecekMailAdresi.PlaceholderText = "";
@@ -175,6 +177,7 @@
             txtGonderilecekMailAdresi.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtGonderilecekMailAdresi.Size = new Size(351, 36);
             txtGonderilecekMailAdresi.TabIndex = 7;
+            txtGonderilecekMailAdresi.Click += txtGonderilecekMailAdresi_Click;
             // 
             // btnBireyselJsonOlustur
             // 
@@ -187,7 +190,7 @@
             btnBireyselJsonOlustur.FillColor = Color.FromArgb(66, 84, 94);
             btnBireyselJsonOlustur.Font = new Font("Segoe UI", 9F);
             btnBireyselJsonOlustur.ForeColor = Color.White;
-            btnBireyselJsonOlustur.Location = new Point(1047, 412);
+            btnBireyselJsonOlustur.Location = new Point(938, 411);
             btnBireyselJsonOlustur.Name = "btnBireyselJsonOlustur";
             btnBireyselJsonOlustur.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnBireyselJsonOlustur.Size = new Size(225, 56);
@@ -195,11 +198,23 @@
             btnBireyselJsonOlustur.Text = "Json Dosyası Oluştur";
             btnBireyselJsonOlustur.Click += btnBireyselJsonOlustur_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label2.ForeColor = Color.Fuchsia;
+            label2.Location = new Point(784, -40);
+            label2.Name = "label2";
+            label2.Size = new Size(314, 46);
+            label2.TabIndex = 35;
+            label2.Text = "_____________________";
+            // 
             // BireyselBordro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1368, 532);
+            Controls.Add(label2);
             Controls.Add(txtGonderilecekMailAdresi);
             Controls.Add(lvBireyselBordro);
             Controls.Add(btnBireyselJsonOlustur);
@@ -228,5 +243,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbBordrosuGoruntulenmekIstenenPersonelTuru;
         private Guna.UI2.WinForms.Guna2TextBox txtGonderilecekMailAdresi;
         private Guna.UI2.WinForms.Guna2Button btnBireyselJsonOlustur;
+        private Label label2;
     }
 }

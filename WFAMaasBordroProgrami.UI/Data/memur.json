@@ -1,23 +1,56 @@
 [
   {
     "Kadro": "Memur",
-    "AnaKazanc": 10600,
-    "MemurunDerecesi": 2,
+    "EkKazanc": 0,
+    "AnaKazanc": 11400,
+    "MemurunDerecesi": 0,
+    "SaatlikUcret": 570,
     "AdSoyad": "Merve Mihmano\u011Flu",
     "CalismaSaati": 20
   },
   {
     "Kadro": "Memur",
-    "AnaKazanc": 28500,
+    "EkKazanc": 0,
+    "AnaKazanc": 34200,
     "MemurunDerecesi": 0,
+    "SaatlikUcret": 570,
     "AdSoyad": "Talha Din",
-    "CalismaSaati": 50
+    "CalismaSaati": 60
   },
   {
     "Kadro": "Memur",
-    "AnaKazanc": 27500,
+    "EkKazanc": 11587.5,
+    "AnaKazanc": 100425,
+    "MemurunDerecesi": 3,
+    "SaatlikUcret": 515,
+    "AdSoyad": "Ay\u015Fe Demirkaynak",
+    "CalismaSaati": 195
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 14850.0,
+    "AnaKazanc": 108900,
     "MemurunDerecesi": 1,
-    "AdSoyad": "Ekrem Can Hosanl\u0131",
-    "CalismaSaati": 50
+    "SaatlikUcret": 550,
+    "AdSoyad": "Uygar Demirkaynak",
+    "CalismaSaati": 198
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 188100.0,
+    "AnaKazanc": 228000,
+    "MemurunDerecesi": 0,
+    "SaatlikUcret": 570,
+    "AdSoyad": "Ali \u015Eahin",
+    "CalismaSaati": 400
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 0,
+    "AnaKazanc": 87980,
+    "MemurunDerecesi": 2,
+    "SaatlikUcret": 530,
+    "AdSoyad": "Merve Y\u0131ld\u0131z",
+    "CalismaSaati": 166
   }
 ]

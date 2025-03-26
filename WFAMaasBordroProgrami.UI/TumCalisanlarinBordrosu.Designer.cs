@@ -36,6 +36,7 @@
             btnPdfOlustur = new Guna.UI2.WinForms.Guna2Button();
             btnExcelOlustur = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // lvTumCalisanlarinBordrosu
@@ -93,11 +94,23 @@
             label1.TabIndex = 11;
             label1.Text = "150 saatten az çalışan personeller mavi renk ile belirtilmiştir!";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label2.ForeColor = Color.Fuchsia;
+            label2.Location = new Point(1066, -40);
+            label2.Name = "label2";
+            label2.Size = new Size(314, 46);
+            label2.TabIndex = 36;
+            label2.Text = "_____________________";
+            // 
             // TumCalisanlarinBordrosu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1368, 532);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lvTumCalisanlarinBordrosu);
             Controls.Add(btnPdfOlustur);
@@ -116,5 +129,6 @@
         private Guna.UI2.WinForms.Guna2Button btnPdfOlustur;
         private Guna.UI2.WinForms.Guna2Button btnExcelOlustur;
         private Label label1;
+        private Label label2;
     }
 }

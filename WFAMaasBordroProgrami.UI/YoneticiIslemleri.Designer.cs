@@ -47,6 +47,7 @@
             btnYoneticiEkle = new Button();
             btnYoneticiSil = new Button();
             btnYoneticiGuncelle = new Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvYoneticiler).BeginInit();
             SuspendLayout();
             // 
@@ -165,6 +166,7 @@
             guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.Enabled = false;
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Microsoft Sans Serif", 10.2F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -172,6 +174,7 @@
             guna2TextBox1.Margin = new Padding(4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox1.Size = new Size(358, 36);
@@ -227,11 +230,24 @@
             btnYoneticiGuncelle.UseVisualStyleBackColor = true;
             btnYoneticiGuncelle.Click += btnYoneticiGuncelle_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label2.ForeColor = Color.Fuchsia;
+            label2.Location = new Point(492, -40);
+            label2.Name = "label2";
+            label2.Size = new Size(314, 46);
+            label2.TabIndex = 34;
+            label2.Text = "_____________________";
+            // 
             // YoneticiIslemleri
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1368, 532);
+            Controls.Add(label2);
             Controls.Add(btnYoneticiGuncelle);
             Controls.Add(btnYoneticiSil);
             Controls.Add(btnYoneticiEkle);
@@ -265,5 +281,6 @@
         private Button btnYoneticiEkle;
         private Button btnYoneticiSil;
         private Button btnYoneticiGuncelle;
+        private Label label2;
     }
 }

@@ -23,6 +23,24 @@ namespace WFAMaasBordroProgrami.UI
         {
             InitializeComponent();
         }
+        public bool BilgilerGecerliMi()
+        {
+            bool bilgilerGecerliMi = true;
+            if (txtMemurAdSoyad.Text == string.Empty || txtMemurCalismaSaati.Text == string.Empty || cmbMemurDerece.SelectedItem == null)
+            {
+                bilgilerGecerliMi = false;
+                MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
+                return bilgilerGecerliMi;
+            }
+            if (!Kontrol.AdSoyadMi(txtMemurAdSoyad.Text) || !Kontrol.CalismaSaatiMi(txtMemurCalismaSaati.Text))
+            {
+                bilgilerGecerliMi = false;
+                MessageBox.Show("Tüm bilgileri doğru girdiğinizden emin olun!");
+                return bilgilerGecerliMi;
+            }
+
+            return bilgilerGecerliMi;
+        }
         public void ListeVeJsonEkle()
         {
             Memur memur = new Memur
@@ -32,7 +50,7 @@ namespace WFAMaasBordroProgrami.UI
                 MemurunDerecesi = (MemurDerecesi)cmbMemurDerece.SelectedItem
             };
             memurlar.Add(memur);
-            JsonDosya.Yaz(memurlar,"memur.json");
+            JsonDosya.Yaz(memurlar, "memur.json");
         }
         public void ListeVeJsonSil()
         {
@@ -46,7 +64,7 @@ namespace WFAMaasBordroProgrami.UI
                     memurlar.RemoveAt(i);
                 }
             }
-            JsonDosya.Yaz(memurlar,"memur.json");
+            JsonDosya.Yaz(memurlar, "memur.json");
         }
         public void ListeVeJsonGuncelle()
         {
@@ -93,24 +111,23 @@ namespace WFAMaasBordroProgrami.UI
             dgvMemurlar.Columns["SaatlikUcret"].Visible = false;
             dgvMemurlar.Columns["AnaKazanc"].Visible = false;
 
-
-
+            dgvMemurlar.Columns[3].HeaderText = "Derece";
+            dgvMemurlar.Columns[5].HeaderText = "Ad Soyad";
+            dgvMemurlar.Columns[6].HeaderText = "Çalışma Saati";
         }
         public void Temizle()
         {
             txtMemurAdSoyad.Text = txtMemurCalismaSaati.Text = string.Empty;
-            cmbMemurDerece.SelectedItem = null;
+            cmbMemurDerece.SelectedIndex = -1;
             dgvMemurlar.ClearSelection();
             cellClickEdildiMi = false;
         }
-
         private void MemurIslemleri_Load(object sender, EventArgs e)
         {
             cmbMemurDerece.DataSource = Enum.GetValues(typeof(MemurDerecesi));
             DataGridViewGuncelle();
             Temizle();
         }
-
         private void btnSil_Click(object sender, EventArgs e)
         {
             if (dgvMemurlar.SelectedRows.Count == 0 || !cellClickEdildiMi)
@@ -122,9 +139,10 @@ namespace WFAMaasBordroProgrami.UI
             DataGridViewGuncelle();
             Temizle();
         }
-
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if (!BilgilerGecerliMi())
+            { return; }
 
             if (dgvMemurlar.SelectedRows.Count == 0 || !cellClickEdildiMi)
             {
@@ -135,17 +153,26 @@ namespace WFAMaasBordroProgrami.UI
             DataGridViewGuncelle();
             Temizle();
         }
-
         private void btnMemurEkle_Click(object sender, EventArgs e)
         {
-            if(txtMemurAdSoyad.Text==string.Empty || txtMemurCalismaSaati.Text==string.Empty || cmbMemurDerece.SelectedItem == null)
+            if (!BilgilerGecerliMi())
+            { return; }
+            foreach (Memur memur in memurlar)
             {
-                MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
-                return;
+                if (txtMemurAdSoyad.Text == memur.AdSoyad)
+                {
+                    MessageBox.Show("Bu isimde bir memur zaten mevcut!");
+                    return;
+                }
             }
             ListeVeJsonEkle();
             DataGridViewGuncelle();
             Temizle();
+        }
+
+        private void btnMemurEkle_MouseEnter(object sender, EventArgs e)
+        {
+
         }
     }
 }

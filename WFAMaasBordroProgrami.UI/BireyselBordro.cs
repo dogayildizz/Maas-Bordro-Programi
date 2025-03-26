@@ -48,6 +48,7 @@ namespace WFAMaasBordroProgrami.UI
 
         private void cmbBordrosuGoruntulenmekIstenenPersonelTuru_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbBordrosuGoruntulenmekIstenenPersonel.Items.Clear();
             if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Memur")
             {
                 foreach (Memur memur in memurlar)
@@ -69,6 +70,12 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnBordroGoruntule_Click(object sender, EventArgs e)
         {
+            if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem == null)
+            { return; }
+
+
+            lvBireyselBordro.Items.Clear();
+
             foreach (Memur memur in memurlar)
             {
                 if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == memur.AdSoyad)
@@ -166,9 +173,9 @@ namespace WFAMaasBordroProgrami.UI
             {
                 foreach (Memur memur in memurlar)
                 {
-                    if(cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == memur.AdSoyad)
+                    if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == memur.AdSoyad)
                     {
-                        MaasBordro.JsonYaz(memur,memur.AdSoyad);
+                        MaasBordro.JsonYaz(memur, memur.AdSoyad);
                     }
 
                 }
@@ -186,6 +193,11 @@ namespace WFAMaasBordroProgrami.UI
                 }
 
             }
+        }
+
+        private void txtGonderilecekMailAdresi_Click(object sender, EventArgs e)
+        {
+            txtGonderilecekMailAdresi.Text = string.Empty;
         }
     }
 }

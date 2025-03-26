@@ -18,6 +18,24 @@ namespace WFAMaasBordroProgrami.UI
     {
         bool cellClickEdildiMi = false;
         List<Yonetici> yoneticiler = new List<Yonetici>();
+        public bool BilgilerGecerliMi()
+        {
+            bool bilgilerGecerliMi = true;
+            if (txtYoneticiAdSoyad.Text == string.Empty || txtYoneticiCalismaSaati.Text == string.Empty)
+            {
+                bilgilerGecerliMi = false;
+                MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
+                return bilgilerGecerliMi;
+            }
+            if (!Kontrol.AdSoyadMi(txtYoneticiAdSoyad.Text) || !Kontrol.CalismaSaatiMi(txtYoneticiCalismaSaati.Text))
+            {
+                bilgilerGecerliMi = false;
+                MessageBox.Show("Tüm bilgileri doğru girdiğinizden emin olun!");
+                return bilgilerGecerliMi;
+            }
+
+            return bilgilerGecerliMi;
+        }
         public void ListeVeJsonGuncelle()
         {
             Yonetici secilenYonetici = new Yonetici();
@@ -47,6 +65,10 @@ namespace WFAMaasBordroProgrami.UI
             dgvYoneticiler.Columns["SaatlikUcret"].Visible = false;
             dgvYoneticiler.Columns["EkKazanc"].Visible = false;
             dgvYoneticiler.Columns["AnaKazanc"].Visible = false;
+
+            dgvYoneticiler.Columns[4].HeaderText = "Ad Soyad";
+            dgvYoneticiler.Columns[5].HeaderText = "Çalışma Saati";
+
         }
         public void ListeVeJsonEkle()
         {
@@ -72,7 +94,7 @@ namespace WFAMaasBordroProgrami.UI
                     yoneticiler.RemoveAt(i);
                 }
             }
-            JsonDosya.Yaz(yoneticiler,"yonetici.json");
+            JsonDosya.Yaz(yoneticiler, "yonetici.json");
         }
         public void Temizle()
         {
@@ -106,12 +128,17 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnYoneticiEkle_Click(object sender, EventArgs e)
         {
-            if (txtYoneticiAdSoyad.Text == string.Empty || txtYoneticiCalismaSaati.Text == string.Empty)
-            {
-                MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
-                return;
-            }
+            if (!BilgilerGecerliMi())
+            { return; }
 
+            foreach (Yonetici yonetici in yoneticiler)
+            {
+                if (txtYoneticiAdSoyad.Text == yonetici.AdSoyad)
+                {
+                    MessageBox.Show("Bu isimde bir memur zaten mevcut!");
+                    return;
+                }
+            }
             ListeVeJsonEkle();
             DataGridViewGuncelle();
             Temizle();
@@ -136,6 +163,8 @@ namespace WFAMaasBordroProgrami.UI
                 MessageBox.Show("Lütfen bir çalışan seçiniz!");
                 return;
             }
+            if (!BilgilerGecerliMi())
+            { return; }
             ListeVeJsonGuncelle();
             DataGridViewGuncelle();
             Temizle();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CLMaasBordro
+namespace CLMaasBordro.Models
 {
     static public class Kontrol
     {
@@ -19,20 +19,19 @@ namespace CLMaasBordro
 
             return calismaSaatiMi;
         }
-
         static public bool AdSoyadMi(string adSoyad)
         {
             bool adSoyadMi = true;
 
             foreach (char c in adSoyad)
             {
-                if (!char.IsLetter(c) && c!=' ')
+                if (!char.IsLetter(c) && c != ' ')
                 {
                     adSoyadMi = false;
                     return adSoyadMi;
                 }
             }
-            if(!adSoyad.Contains(" "))
+            if (!adSoyad.Contains(" "))
             {
                 adSoyadMi = false;
                 return adSoyadMi;

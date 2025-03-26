@@ -76,7 +76,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(196, 23);
+            pictureBox2.Location = new Point(219, 23);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(379, 119);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;

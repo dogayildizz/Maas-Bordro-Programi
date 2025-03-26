@@ -27,12 +27,8 @@ namespace WFAMaasBordroProgrami.UI
         {
 
         }
-
         #region Buttonlarýn Click Eventleri
-        private void btnProgramiKapat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+      
 
 
         private void btnBireyselBordroFormunuGetir_Click(object sender, EventArgs e)
@@ -60,10 +56,13 @@ namespace WFAMaasBordroProgrami.UI
         }
 
         #endregion
-
         private void btnFormuAltaAt_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        private void btnProgramiKapat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

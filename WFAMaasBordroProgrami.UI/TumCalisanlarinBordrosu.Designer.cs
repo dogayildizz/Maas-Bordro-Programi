@@ -55,9 +55,9 @@
             btnPdfOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPdfOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnPdfOlustur.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPdfOlustur.FillColor = Color.WhiteSmoke;
+            btnPdfOlustur.FillColor = Color.FromArgb(0, 12, 74);
             btnPdfOlustur.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
-            btnPdfOlustur.ForeColor = SystemColors.ControlText;
+            btnPdfOlustur.ForeColor = Color.White;
             btnPdfOlustur.Location = new Point(771, 426);
             btnPdfOlustur.Name = "btnPdfOlustur";
             btnPdfOlustur.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -75,9 +75,9 @@
             btnExcelOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcelOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnExcelOlustur.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExcelOlustur.FillColor = Color.WhiteSmoke;
+            btnExcelOlustur.FillColor = Color.FromArgb(0, 12, 74);
             btnExcelOlustur.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
-            btnExcelOlustur.ForeColor = SystemColors.ControlText;
+            btnExcelOlustur.ForeColor = Color.White;
             btnExcelOlustur.Location = new Point(1021, 426);
             btnExcelOlustur.Name = "btnExcelOlustur";
             btnExcelOlustur.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -89,9 +89,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.2F);
             label1.Location = new Point(120, 384);
             label1.Name = "label1";
-            label1.Size = new Size(407, 20);
+            label1.Size = new Size(465, 23);
             label1.TabIndex = 11;
             label1.Text = "150 saatten az çalışan personeller mavi renk ile belirtilmiştir!";
             // 
@@ -110,6 +111,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1368, 532);
             Controls.Add(label2);
             Controls.Add(label1);

@@ -21,6 +21,7 @@ namespace WFAMaasBordroProgrami.UI
         List<Memur> memurlar = new List<Memur>();
         List<Yonetici> yoneticiler = new List<Yonetici>();
 
+        bool bordroOlusturulduMu = false; //Bordro oluşturulmadan mail ve json oluşturulmasını engellemek için kullandığım bir değişken.
         public void ListViewBasliklariOlustur() //Manuel olarak Listviewin başlıklarını oluşturduk.
         {
             lvBireyselBordro.View = View.Details;  //.View öğelerin nasıl gösterileceğini belirler. View.Details detaylı görünüm demek
@@ -75,7 +76,7 @@ namespace WFAMaasBordroProgrami.UI
             if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem == null)
             { return; }
 
-
+            bordroOlusturulduMu = true;
             lvBireyselBordro.Items.Clear();
 
             foreach (Memur memur in memurlar)
@@ -108,17 +109,27 @@ namespace WFAMaasBordroProgrami.UI
                 }
 
             }
+            
         }
 
 
 
         private void btnBireyselMailGonder_Click(object sender, EventArgs e)
         {
+            if(!bordroOlusturulduMu)
+                { return; }
+
             string gonderimYapilacakMailAdresi = txtGonderilecekMailAdresi.Text; //Bordronun gönderileceği mail adresini kullanıcıdan alıyoruz.
 
             if (!gonderimYapilacakMailAdresi.EndsWith("@gmail.com")) //Eğer @gmail.com ile bitmiyorsa uyarı veriyoruz.
             {
                 MessageBox.Show("Yalnızca gmail uzantılı mail adresi girmelisiniz!");
+                txtGonderilecekMailAdresi.Text = "example@gmail.com";
+                return;
+            }
+            if(gonderimYapilacakMailAdresi == "@gmail.com" )
+            {
+                MessageBox.Show("Lütfen geçerli bir mail adresi giriniz!");
                 txtGonderilecekMailAdresi.Text = "example@gmail.com";
                 return;
             }
@@ -170,38 +181,49 @@ namespace WFAMaasBordroProgrami.UI
                 MessageBox.Show("E posta başarıyla gönderildi!");
 
             }
-            catch (Exception)
+            catch (Exception ex )
             {
 
-                throw;
+                MessageBox.Show("Mail gönderilirken bir hata oluştu ."+ex.Message);
             }
         }
 
         private void btnBireyselJsonOlustur_Click(object sender, EventArgs e) //Kullanıcının seçtiği personelin Json dosyası oluşturulur.
         {
-            if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Memur")
+            if (!bordroOlusturulduMu)
+            { return; }
+            try
             {
-                foreach (Memur memur in memurlar)
+                if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Memur")
                 {
-                    if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == memur.AdSoyad)
+                    foreach (Memur memur in memurlar)
                     {
-                        MaasBordro.JsonYaz(memur, memur.AdSoyad);
+                        if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == memur.AdSoyad)
+                        {
+                            MaasBordro.JsonYaz(memur, memur.AdSoyad);
+                        }
+
                     }
 
                 }
+                if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Yönetici")
+                {
+                    foreach (Yonetici yonetici in yoneticiler)
+                    {
+                        if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == yonetici.AdSoyad)
+                        {
+                            MaasBordro.JsonYaz(yonetici, yonetici.AdSoyad);
+                        }
 
+                    }
+
+                }
+                MessageBox.Show("Json dosyası başarıyla oluşturuldu!");
             }
-            if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Yönetici")
+            catch (Exception ex )
             {
-                foreach (Yonetici yonetici in yoneticiler)
-                {
-                    if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem.ToString() == yonetici.AdSoyad)
-                    {
-                        MaasBordro.JsonYaz(yonetici, yonetici.AdSoyad);
-                    }
 
-                }
-
+                MessageBox.Show("Json dosyası oluşturulurken bir hata oluştu. "+ ex.Message);
             }
         }
 

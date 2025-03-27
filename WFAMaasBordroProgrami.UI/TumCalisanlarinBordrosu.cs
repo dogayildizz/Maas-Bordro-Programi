@@ -35,7 +35,7 @@ namespace WFAMaasBordroProgrami.UI
 
             lvTumCalisanlarinBordrosu.View = View.Details;  //.View öğelerin nasıl gösterileceğini belirler. View.Details detaylı görünüm demek
             lvTumCalisanlarinBordrosu.GridLines = true;  //satır ve sütun aralarındaki çizgilerin görünürlüğünü aktif ettik.
-            lvTumCalisanlarinBordrosu.Columns.Add("Personel Adı Soyadı", 220, HorizontalAlignment.Center); //sütun ekledik : (sütunun başlığı, sütunun genişliği)
+            lvTumCalisanlarinBordrosu.Columns.Add("Personel Adı Soyadı", 220, HorizontalAlignment.Center); //sütun ekledik : (sütunun başlığı, sütunun genişliği, sütundaki yazıyı ortala)
             lvTumCalisanlarinBordrosu.Columns.Add("Kadro", 180, HorizontalAlignment.Center);
             lvTumCalisanlarinBordrosu.Columns.Add("Çalışma Saati ", 180, HorizontalAlignment.Center);
             lvTumCalisanlarinBordrosu.Columns.Add("Ana Kazanç", 180, HorizontalAlignment.Center);
@@ -44,14 +44,14 @@ namespace WFAMaasBordroProgrami.UI
 
             foreach (Memur memur in memurlar)
             {
-                ListViewItem listViewItem = new ListViewItem(memur.AdSoyad);
-                listViewItem.SubItems.Add(memur.Kadro);
+                ListViewItem listViewItem = new ListViewItem(memur.AdSoyad); //Burada newlememizin nedeni yeni bir satır oluşturuyoruz. ListViewItem bir class. Ondan yeni bir nesne ürettik.
+                listViewItem.SubItems.Add(memur.Kadro); //SubItems, listViewItem satırının hücresi
                 listViewItem.SubItems.Add(memur.CalismaSaati.ToString());
                 listViewItem.SubItems.Add(memur.AnaKazanc.ToString("C2"));
                 listViewItem.SubItems.Add(memur.EkKazanc.ToString("C2"));
                 listViewItem.SubItems.Add(memur.ToplamMaasHesapla().ToString("C2"));
 
-                // Çalışma saati 150'den düşükse, satırın rengini kırmızı yap
+                // Çalışma saati 150'den düşükse, satırın rengini mavi yap
                 if (memur.CalismaSaati < 150)
                 {
                     listViewItem.BackColor = Color.LightSteelBlue;
@@ -69,7 +69,7 @@ namespace WFAMaasBordroProgrami.UI
                 listViewItem.SubItems.Add(yonetici.EkKazanc.ToString("C2"));
                 listViewItem.SubItems.Add(yonetici.ToplamMaasHesapla().ToString("C2"));
 
-                // Çalışma saati 150'den düşükse, satırın rengini kırmızı yap
+                // Çalışma saati 150'den düşükse, satırın rengini mavi yap
                 if (yonetici.CalismaSaati < 150)
                 {
                     listViewItem.BackColor = Color.LightSteelBlue;
@@ -130,7 +130,7 @@ namespace WFAMaasBordroProgrami.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Excel oluşturulurken bir hata oluştu. "+ex.Message);
             }
         }
 

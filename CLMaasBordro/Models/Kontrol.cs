@@ -30,11 +30,16 @@ namespace CLMaasBordro.Models
             {
                 if (!char.IsLetter(c) && c != ' ')
                 {
-                    adSoyadMi = false;
+                    adSoyadMi = false;                    
                     return adSoyadMi;
                 }
             }
             if (!adSoyad.Contains(" ")) //Boşluk içeriyor mu diye kontrol ettik. (Her insanın adı ve soyadı vardır, bu yüzden en az bir boşluk içermesi zorunludur.
+            {
+                adSoyadMi = false;
+                return adSoyadMi;
+            }
+            if(adSoyad.StartsWith(" ") || adSoyad.EndsWith(" "))  //Boşluk ile başlıyor mu veya bitiyor mu diye baktık.
             {
                 adSoyadMi = false;
                 return adSoyadMi;

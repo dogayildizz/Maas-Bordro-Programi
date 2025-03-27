@@ -2,20 +2,11 @@
   {
     "Kadro": "Memur",
     "EkKazanc": 0,
-    "AnaKazanc": 102600,
-    "MemurunDerecesi": 0,
-    "SaatlikUcret": 570,
+    "AnaKazanc": 90000,
+    "MemurunDerecesi": 4,
+    "SaatlikUcret": 500,
     "AdSoyad": "Talha Din",
     "CalismaSaati": 180
-  },
-  {
-    "Kadro": "Memur",
-    "EkKazanc": 11587.5,
-    "AnaKazanc": 92700,
-    "MemurunDerecesi": 3,
-    "SaatlikUcret": 515,
-    "AdSoyad": "Ay\u015Fe Demirkaynak",
-    "CalismaSaati": 195
   },
   {
     "Kadro": "Memur",
@@ -52,5 +43,41 @@
     "SaatlikUcret": 570,
     "AdSoyad": "Senem Demirkaynak",
     "CalismaSaati": 60
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 11587.5,
+    "AnaKazanc": 92700,
+    "MemurunDerecesi": 3,
+    "SaatlikUcret": 515,
+    "AdSoyad": "Ay\u015Fe Demirkaynak",
+    "CalismaSaati": 195
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 0,
+    "AnaKazanc": 102600,
+    "MemurunDerecesi": 0,
+    "SaatlikUcret": 570,
+    "AdSoyad": "Erhan \u015Eim\u015Fek",
+    "CalismaSaati": 180
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 0,
+    "AnaKazanc": 56430,
+    "MemurunDerecesi": 0,
+    "SaatlikUcret": 570,
+    "AdSoyad": "Emir Uz",
+    "CalismaSaati": 99
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 0,
+    "AnaKazanc": 70110,
+    "MemurunDerecesi": 0,
+    "SaatlikUcret": 570,
+    "AdSoyad": "Mehmet Efe Ayg\u00FCn",
+    "CalismaSaati": 123
   }
 ]

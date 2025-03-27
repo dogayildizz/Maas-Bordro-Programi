@@ -29,13 +29,21 @@ namespace WFAMaasBordroProgrami.UI
             if (txtMemurAdSoyad.Text == string.Empty || txtMemurCalismaSaati.Text == string.Empty || cmbMemurDerece.SelectedItem == null || String.IsNullOrWhiteSpace(txtMemurAdSoyad.Text))
             {
                 bilgilerGecerliMi = false;
-                MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
+                MessageBox.Show("Lütfen tüm bilgileri eksiksiz doldurunuz!");
                 return bilgilerGecerliMi;
             }
-            if (!Kontrol.AdSoyadMi(txtMemurAdSoyad.Text) || !Kontrol.CalismaSaatiMi(txtMemurCalismaSaati.Text))
+            if (!Kontrol.AdSoyadMi(txtMemurAdSoyad.Text))
             {
                 bilgilerGecerliMi = false;
-                MessageBox.Show("Tüm bilgileri doğru girdiğinizden emin olun!");
+                MessageBox.Show("Ad soyad arasında en az bir boşluk olmalıdır, ve sadece harflerden oluşmalıdır.  Ayrıca boşluk ile başlamamalı ve bitmemelidir.");
+                txtMemurAdSoyad.Text = string.Empty;
+                return bilgilerGecerliMi;
+            }
+            if(!Kontrol.CalismaSaatiMi(txtMemurCalismaSaati.Text))
+            {
+                bilgilerGecerliMi = false;
+                MessageBox.Show("Çalışma saati 0-500 arasında olmalıdır.");
+                txtMemurCalismaSaati.Text = string.Empty;
                 return bilgilerGecerliMi;
             }
 
@@ -105,7 +113,6 @@ namespace WFAMaasBordroProgrami.UI
         public void DataGridViewGuncelle()
         {
             memurlar = JsonDosya.Oku<Memur>("memur.json");
-            memurlar.Reverse();
             dgvMemurlar.DataSource = null;
             dgvMemurlar.DataSource = memurlar;
 
@@ -141,8 +148,17 @@ namespace WFAMaasBordroProgrami.UI
                 MessageBox.Show("Lütfen bir çalışan seçiniz!");
                 return;
             }
-            ListeVeJsonSil();
-            DataGridViewGuncelle();
+
+            DialogResult dr = MessageBox.Show("Bu personeli gerçekten silmek istediğinize emin misiniz?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if(dr == DialogResult.No)
+            { return; }
+            else
+            {
+                MessageBox.Show("Personel başarıyla silindi!");
+                ListeVeJsonSil();
+                DataGridViewGuncelle();
+            }            
             Temizle();
         }
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -159,6 +175,7 @@ namespace WFAMaasBordroProgrami.UI
             }
             ListeVeJsonGuncelle();
             DataGridViewGuncelle();
+            MessageBox.Show("Personel başarıyla güncellenmiştir!");
             Temizle();
         }
         private void btnMemurEkle_Click(object sender, EventArgs e)

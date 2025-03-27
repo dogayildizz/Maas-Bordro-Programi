@@ -50,6 +50,7 @@ namespace WFAMaasBordroProgrami.UI
         private void cmbBordrosuGoruntulenmekIstenenPersonelTuru_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbBordrosuGoruntulenmekIstenenPersonel.Items.Clear(); //Üst üste yazmasın hepsini diye her personel türü seçildiğinde, personellerin ad soyadlarının yazılı olduğu comboboxı temizledik.
+            lvBireyselBordro.Items.Clear();
 
             //Kullanıcı eğer comboboxtan personel türünü Memur seçerse, altındaki comboboxa memurlarımızın ad soyadlarını eklendi.
             if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Memur")
@@ -109,15 +110,22 @@ namespace WFAMaasBordroProgrami.UI
                 }
 
             }
-            
+
         }
-
-
 
         private void btnBireyselMailGonder_Click(object sender, EventArgs e)
         {
-            if(!bordroOlusturulduMu)
-                { return; }
+            if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem == null || cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == null)
+            {
+                MessageBox.Show("Lütfen önce personel seçiniz.");
+                return;
+            }
+            if (!bordroOlusturulduMu)
+            {
+                MessageBox.Show("Lütfen önce bordroyu görüntüleyin.");
+                return;
+            }
+            
 
             string gonderimYapilacakMailAdresi = txtGonderilecekMailAdresi.Text; //Bordronun gönderileceği mail adresini kullanıcıdan alıyoruz.
 
@@ -127,7 +135,7 @@ namespace WFAMaasBordroProgrami.UI
                 txtGonderilecekMailAdresi.Text = "example@gmail.com";
                 return;
             }
-            if(gonderimYapilacakMailAdresi == "@gmail.com" )
+            if (gonderimYapilacakMailAdresi == "@gmail.com")
             {
                 MessageBox.Show("Lütfen geçerli bir mail adresi giriniz!");
                 txtGonderilecekMailAdresi.Text = "example@gmail.com";
@@ -145,7 +153,7 @@ namespace WFAMaasBordroProgrami.UI
                     for (int column = 0; column < lvBireyselBordro.Columns.Count; column++)
                     {
                         //1. satırın sütunlarına, listviewden aldığımız başlıkları sırasıyla yazdırdık.
-                        worksheet.Cell(1, column + 1).Value = lvBireyselBordro.Columns[column].Text; 
+                        worksheet.Cell(1, column + 1).Value = lvBireyselBordro.Columns[column].Text;
                     }
 
                     int row = 2; //Satır sayısını 2 aldık, diğer eklenecek öğeleri eklemeye 2. satırdan başlasın diye. Çünkü 1. satırda başlıklar var.
@@ -181,17 +189,26 @@ namespace WFAMaasBordroProgrami.UI
                 MessageBox.Show("E posta başarıyla gönderildi!");
 
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
 
-                MessageBox.Show("Mail gönderilirken bir hata oluştu ."+ex.Message);
+                MessageBox.Show("Mail gönderilirken bir hata oluştu .");
             }
         }
 
         private void btnBireyselJsonOlustur_Click(object sender, EventArgs e) //Kullanıcının seçtiği personelin Json dosyası oluşturulur.
         {
+            
+            if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem == null || cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == null)
+            {
+                MessageBox.Show("Lütfen önce personel seçiniz.");
+                return;
+            }
             if (!bordroOlusturulduMu)
-            { return; }
+            {
+                MessageBox.Show("Lütfen önce bordroyu görüntüleyin.");
+                return;
+            }
             try
             {
                 if (cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == "Memur")
@@ -220,16 +237,21 @@ namespace WFAMaasBordroProgrami.UI
                 }
                 MessageBox.Show("Json dosyası başarıyla oluşturuldu!");
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
 
-                MessageBox.Show("Json dosyası oluşturulurken bir hata oluştu. "+ ex.Message);
+                MessageBox.Show("Json dosyası oluşturulurken bir hata oluştu. ");
             }
         }
 
         private void txtGonderilecekMailAdresi_Click(object sender, EventArgs e)
         {
             txtGonderilecekMailAdresi.Text = string.Empty;
+        }
+
+        private void cmbBordrosuGoruntulenmekIstenenPersonel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bordroOlusturulduMu = false;
         }
     }
 }

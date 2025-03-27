@@ -24,13 +24,21 @@ namespace WFAMaasBordroProgrami.UI
             if (txtYoneticiAdSoyad.Text == string.Empty || txtYoneticiCalismaSaati.Text == string.Empty || String.IsNullOrWhiteSpace(txtYoneticiAdSoyad.Text))
             {
                 bilgilerGecerliMi = false;
-                MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
+                MessageBox.Show("Lütfen tüm bilgileri eksiksiz doldurunuz!");
                 return bilgilerGecerliMi;
             }
-            if (!Kontrol.AdSoyadMi(txtYoneticiAdSoyad.Text) || !Kontrol.CalismaSaatiMi(txtYoneticiCalismaSaati.Text))
+            if (!Kontrol.AdSoyadMi(txtYoneticiAdSoyad.Text) )
             {
                 bilgilerGecerliMi = false;
-                MessageBox.Show("Tüm bilgileri doğru girdiğinizden emin olun!");
+                MessageBox.Show("Ad soyad arasında en az bir boşluk olmalıdır, ve sadece harflerden oluşmalıdır. Ayrıca boşluk ile başlamamalı ve bitmemelidir.");
+                txtYoneticiAdSoyad.Text = string.Empty;
+                return bilgilerGecerliMi;
+            }
+            if(!Kontrol.CalismaSaatiMi(txtYoneticiCalismaSaati.Text))
+            {
+                bilgilerGecerliMi = false;
+                MessageBox.Show("Çalışma saati 0-500 arasında olmalıdır.");
+                txtYoneticiCalismaSaati.Text = string.Empty;
                 return bilgilerGecerliMi;
             }
 
@@ -59,7 +67,6 @@ namespace WFAMaasBordroProgrami.UI
         public void DataGridViewGuncelle()
         {
             yoneticiler = JsonDosya.Oku<Yonetici>("yonetici.json");
-            yoneticiler.Reverse();
             dgvYoneticiler.DataSource = null;
             dgvYoneticiler.DataSource = yoneticiler;
 
@@ -176,6 +183,7 @@ namespace WFAMaasBordroProgrami.UI
             }
             if (!BilgilerGecerliMi())
             { return; }
+            MessageBox.Show("Personel başarıyla güncellenmiştir.");
             ListeVeJsonGuncelle();
             DataGridViewGuncelle();
             Temizle();

@@ -74,8 +74,11 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnBordroGoruntule_Click(object sender, EventArgs e)
         {
-            if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem == null)
-            { return; }
+            if (cmbBordrosuGoruntulenmekIstenenPersonel.SelectedItem == null || cmbBordrosuGoruntulenmekIstenenPersonelTuru.SelectedItem == null)
+            {
+                MessageBox.Show("Lütfen önce bir personel seçiniz.");
+                return;
+            }
 
             bordroOlusturulduMu = true;
             lvBireyselBordro.Items.Clear();

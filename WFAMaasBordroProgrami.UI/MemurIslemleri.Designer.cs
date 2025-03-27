@@ -60,7 +60,7 @@ namespace WFAMaasBordroProgrami.UI
             // cmbMemurDerece
             // 
             cmbMemurDerece.BackColor = Color.Transparent;
-            cmbMemurDerece.BorderColor = Color.Gray;
+            cmbMemurDerece.BorderColor = Color.FromArgb(213, 218, 223);
             cmbMemurDerece.CustomizableEdges = customizableEdges1;
             cmbMemurDerece.DrawMode = DrawMode.OwnerDrawFixed;
             cmbMemurDerece.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -69,7 +69,7 @@ namespace WFAMaasBordroProgrami.UI
             cmbMemurDerece.Font = new Font("Segoe UI", 10F);
             cmbMemurDerece.ForeColor = Color.FromArgb(64, 64, 64);
             cmbMemurDerece.ItemHeight = 30;
-            cmbMemurDerece.Location = new Point(533, 191);
+            cmbMemurDerece.Location = new Point(624, 163);
             cmbMemurDerece.Name = "cmbMemurDerece";
             cmbMemurDerece.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbMemurDerece.Size = new Size(358, 36);
@@ -80,7 +80,7 @@ namespace WFAMaasBordroProgrami.UI
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             guna2HtmlLabel5.ForeColor = Color.Black;
-            guna2HtmlLabel5.Location = new Point(533, 145);
+            guna2HtmlLabel5.Location = new Point(624, 131);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(56, 25);
             guna2HtmlLabel5.TabIndex = 15;
@@ -91,7 +91,7 @@ namespace WFAMaasBordroProgrami.UI
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             guna2HtmlLabel3.ForeColor = Color.Black;
-            guna2HtmlLabel3.Location = new Point(84, 37);
+            guna2HtmlLabel3.Location = new Point(77, 36);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(134, 25);
             guna2HtmlLabel3.TabIndex = 16;
@@ -102,7 +102,7 @@ namespace WFAMaasBordroProgrami.UI
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 10.2F);
             guna2HtmlLabel4.ForeColor = Color.Black;
-            guna2HtmlLabel4.Location = new Point(84, 145);
+            guna2HtmlLabel4.Location = new Point(77, 131);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(166, 25);
             guna2HtmlLabel4.TabIndex = 17;
@@ -110,7 +110,6 @@ namespace WFAMaasBordroProgrami.UI
             // 
             // txtMemurAdSoyad
             // 
-            txtMemurAdSoyad.BorderColor = Color.Gray;
             txtMemurAdSoyad.CustomizableEdges = customizableEdges3;
             txtMemurAdSoyad.DefaultText = "";
             txtMemurAdSoyad.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -121,7 +120,7 @@ namespace WFAMaasBordroProgrami.UI
             txtMemurAdSoyad.Font = new Font("Microsoft Sans Serif", 10.2F);
             txtMemurAdSoyad.ForeColor = Color.FromArgb(64, 64, 64);
             txtMemurAdSoyad.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMemurAdSoyad.Location = new Point(84, 83);
+            txtMemurAdSoyad.Location = new Point(77, 68);
             txtMemurAdSoyad.Margin = new Padding(4);
             txtMemurAdSoyad.Name = "txtMemurAdSoyad";
             txtMemurAdSoyad.PlaceholderText = "";
@@ -132,7 +131,6 @@ namespace WFAMaasBordroProgrami.UI
             // 
             // txtMemurCalismaSaati
             // 
-            txtMemurCalismaSaati.BorderColor = Color.Gray;
             txtMemurCalismaSaati.CustomizableEdges = customizableEdges5;
             txtMemurCalismaSaati.DefaultText = "";
             txtMemurCalismaSaati.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -143,7 +141,7 @@ namespace WFAMaasBordroProgrami.UI
             txtMemurCalismaSaati.Font = new Font("Microsoft Sans Serif", 10.2F);
             txtMemurCalismaSaati.ForeColor = Color.FromArgb(64, 64, 64);
             txtMemurCalismaSaati.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMemurCalismaSaati.Location = new Point(84, 191);
+            txtMemurCalismaSaati.Location = new Point(77, 163);
             txtMemurCalismaSaati.Margin = new Padding(4);
             txtMemurCalismaSaati.Name = "txtMemurCalismaSaati";
             txtMemurCalismaSaati.PlaceholderText = "";
@@ -154,13 +152,12 @@ namespace WFAMaasBordroProgrami.UI
             // 
             // btnSil
             // 
-            btnSil.BackColor = Color.FromArgb(217, 83, 79);
+            btnSil.BackColor = Color.FromArgb(198, 40, 40);
             btnSil.FlatAppearance.BorderColor = Color.FromArgb(200, 35, 51);
             btnSil.FlatAppearance.BorderSize = 2;
-            btnSil.FlatStyle = FlatStyle.Flat;
-            btnSil.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btnSil.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnSil.ForeColor = Color.White;
-            btnSil.Location = new Point(1186, 191);
+            btnSil.Location = new Point(1186, 163);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(97, 36);
             btnSil.TabIndex = 23;
@@ -170,13 +167,12 @@ namespace WFAMaasBordroProgrami.UI
             // 
             // btnGuncelle
             // 
-            btnGuncelle.BackColor = Color.FromArgb(13, 27, 42);
+            btnGuncelle.BackColor = Color.WhiteSmoke;
             btnGuncelle.FlatAppearance.BorderColor = Color.Black;
             btnGuncelle.FlatAppearance.BorderSize = 2;
-            btnGuncelle.FlatStyle = FlatStyle.Flat;
-            btnGuncelle.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            btnGuncelle.ForeColor = Color.White;
-            btnGuncelle.Location = new Point(1083, 191);
+            btnGuncelle.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnGuncelle.ForeColor = SystemColors.ControlText;
+            btnGuncelle.Location = new Point(1186, 121);
             btnGuncelle.Name = "btnGuncelle";
             btnGuncelle.Size = new Size(97, 36);
             btnGuncelle.TabIndex = 23;
@@ -188,14 +184,12 @@ namespace WFAMaasBordroProgrami.UI
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvMemurlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvMemurlar.BorderStyle = BorderStyle.Fixed3D;
-            dgvMemurlar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(92, 107, 142);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 12, 74);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(92, 107, 142);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(42, 46, 55);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 12, 74);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvMemurlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvMemurlar.ColumnHeadersHeight = 40;
@@ -203,19 +197,19 @@ namespace WFAMaasBordroProgrami.UI
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(208, 216, 232);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvMemurlar.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvMemurlar.GridColor = Color.FromArgb(100, 130, 180);
-            dgvMemurlar.Location = new Point(79, 266);
+            dgvMemurlar.GridColor = Color.FromArgb(231, 229, 255);
+            dgvMemurlar.Location = new Point(79, 248);
             dgvMemurlar.MultiSelect = false;
             dgvMemurlar.Name = "dgvMemurlar";
             dgvMemurlar.ReadOnly = true;
             dgvMemurlar.RowHeadersVisible = false;
             dgvMemurlar.RowHeadersWidth = 51;
-            dgvMemurlar.Size = new Size(1204, 220);
+            dgvMemurlar.Size = new Size(1204, 238);
             dgvMemurlar.TabIndex = 22;
             dgvMemurlar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvMemurlar.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -223,9 +217,9 @@ namespace WFAMaasBordroProgrami.UI
             dgvMemurlar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             dgvMemurlar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dgvMemurlar.ThemeStyle.BackColor = Color.White;
-            dgvMemurlar.ThemeStyle.GridColor = Color.FromArgb(100, 130, 180);
+            dgvMemurlar.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             dgvMemurlar.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvMemurlar.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvMemurlar.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvMemurlar.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F);
             dgvMemurlar.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvMemurlar.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -242,7 +236,6 @@ namespace WFAMaasBordroProgrami.UI
             // 
             // guna2TextBox1
             // 
-            guna2TextBox1.BorderColor = Color.Gray;
             guna2TextBox1.CustomizableEdges = customizableEdges7;
             guna2TextBox1.DefaultText = "Memur";
             guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -254,7 +247,7 @@ namespace WFAMaasBordroProgrami.UI
             guna2TextBox1.Font = new Font("Microsoft Sans Serif", 10.2F);
             guna2TextBox1.ForeColor = Color.FromArgb(64, 64, 64);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(533, 83);
+            guna2TextBox1.Location = new Point(624, 68);
             guna2TextBox1.Margin = new Padding(4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
@@ -269,7 +262,7 @@ namespace WFAMaasBordroProgrami.UI
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 10.2F);
             guna2HtmlLabel1.ForeColor = Color.Black;
-            guna2HtmlLabel1.Location = new Point(533, 37);
+            guna2HtmlLabel1.Location = new Point(624, 36);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(48, 25);
             guna2HtmlLabel1.TabIndex = 17;
@@ -277,13 +270,12 @@ namespace WFAMaasBordroProgrami.UI
             // 
             // btnMemurEkle
             // 
-            btnMemurEkle.BackColor = Color.FromArgb(13, 27, 42);
+            btnMemurEkle.BackColor = Color.WhiteSmoke;
             btnMemurEkle.FlatAppearance.BorderColor = Color.Black;
             btnMemurEkle.FlatAppearance.BorderSize = 2;
-            btnMemurEkle.FlatStyle = FlatStyle.Flat;
-            btnMemurEkle.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnMemurEkle.ForeColor = Color.White;
-            btnMemurEkle.Location = new Point(980, 191);
+            btnMemurEkle.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnMemurEkle.ForeColor = SystemColors.ControlText;
+            btnMemurEkle.Location = new Point(1083, 121);
             btnMemurEkle.Name = "btnMemurEkle";
             btnMemurEkle.Size = new Size(97, 36);
             btnMemurEkle.TabIndex = 24;

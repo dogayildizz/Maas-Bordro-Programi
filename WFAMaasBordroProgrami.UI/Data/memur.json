@@ -1,15 +1,6 @@
 [
   {
     "Kadro": "Memur",
-    "EkKazanc": 17100.0,
-    "AnaKazanc": 114000,
-    "MemurunDerecesi": 0,
-    "SaatlikUcret": 570,
-    "AdSoyad": "Merve Mihmano\u011Flu",
-    "CalismaSaati": 200
-  },
-  {
-    "Kadro": "Memur",
     "EkKazanc": 0,
     "AnaKazanc": 102600,
     "MemurunDerecesi": 0,
@@ -20,7 +11,7 @@
   {
     "Kadro": "Memur",
     "EkKazanc": 11587.5,
-    "AnaKazanc": 100425,
+    "AnaKazanc": 92700,
     "MemurunDerecesi": 3,
     "SaatlikUcret": 515,
     "AdSoyad": "Ay\u015Fe Demirkaynak",
@@ -29,7 +20,7 @@
   {
     "Kadro": "Memur",
     "EkKazanc": 14850.0,
-    "AnaKazanc": 108900,
+    "AnaKazanc": 99000,
     "MemurunDerecesi": 1,
     "SaatlikUcret": 550,
     "AdSoyad": "Uygar Demirkaynak",
@@ -38,7 +29,7 @@
   {
     "Kadro": "Memur",
     "EkKazanc": 188100.0,
-    "AnaKazanc": 228000,
+    "AnaKazanc": 102600,
     "MemurunDerecesi": 0,
     "SaatlikUcret": 570,
     "AdSoyad": "Ali \u015Eahin",
@@ -52,5 +43,14 @@
     "SaatlikUcret": 530,
     "AdSoyad": "Merve Y\u0131ld\u0131z",
     "CalismaSaati": 166
+  },
+  {
+    "Kadro": "Memur",
+    "EkKazanc": 0,
+    "AnaKazanc": 34200,
+    "MemurunDerecesi": 0,
+    "SaatlikUcret": 570,
+    "AdSoyad": "Senem Demirkaynak",
+    "CalismaSaati": 60
   }
 ]

@@ -56,10 +56,10 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvYoneticiler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 12, 74);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 12, 74);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvYoneticiler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -74,13 +74,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvYoneticiler.DefaultCellStyle = dataGridViewCellStyle3;
             dgvYoneticiler.GridColor = Color.FromArgb(231, 229, 255);
-            dgvYoneticiler.Location = new Point(68, 244);
+            dgvYoneticiler.Location = new Point(79, 248);
             dgvYoneticiler.MultiSelect = false;
             dgvYoneticiler.Name = "dgvYoneticiler";
             dgvYoneticiler.ReadOnly = true;
             dgvYoneticiler.RowHeadersVisible = false;
             dgvYoneticiler.RowHeadersWidth = 51;
-            dgvYoneticiler.Size = new Size(1204, 244);
+            dgvYoneticiler.Size = new Size(1204, 238);
             dgvYoneticiler.TabIndex = 23;
             dgvYoneticiler.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvYoneticiler.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -132,7 +132,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 10.2F);
             guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(514, 36);
+            guna2HtmlLabel2.Location = new Point(624, 36);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(48, 25);
             guna2HtmlLabel2.TabIndex = 27;
@@ -170,7 +170,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Microsoft Sans Serif", 10.2F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(514, 68);
+            guna2TextBox1.Location = new Point(624, 68);
             guna2TextBox1.Margin = new Padding(4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
@@ -202,32 +202,41 @@
             // 
             // btnYoneticiEkle
             // 
-            btnYoneticiEkle.Location = new Point(1064, 44);
+            btnYoneticiEkle.BackColor = Color.WhiteSmoke;
+            btnYoneticiEkle.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnYoneticiEkle.ForeColor = SystemColors.ControlText;
+            btnYoneticiEkle.Location = new Point(1083, 121);
             btnYoneticiEkle.Name = "btnYoneticiEkle";
-            btnYoneticiEkle.Size = new Size(94, 29);
+            btnYoneticiEkle.Size = new Size(97, 36);
             btnYoneticiEkle.TabIndex = 32;
             btnYoneticiEkle.Text = "Ekle";
-            btnYoneticiEkle.UseVisualStyleBackColor = true;
+            btnYoneticiEkle.UseVisualStyleBackColor = false;
             btnYoneticiEkle.Click += btnYoneticiEkle_Click;
             // 
             // btnYoneticiSil
             // 
-            btnYoneticiSil.Location = new Point(1064, 122);
+            btnYoneticiSil.BackColor = Color.FromArgb(198, 40, 40);
+            btnYoneticiSil.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnYoneticiSil.ForeColor = Color.White;
+            btnYoneticiSil.Location = new Point(1186, 163);
             btnYoneticiSil.Name = "btnYoneticiSil";
-            btnYoneticiSil.Size = new Size(94, 29);
+            btnYoneticiSil.Size = new Size(97, 36);
             btnYoneticiSil.TabIndex = 32;
             btnYoneticiSil.Text = "Sil";
-            btnYoneticiSil.UseVisualStyleBackColor = true;
+            btnYoneticiSil.UseVisualStyleBackColor = false;
             btnYoneticiSil.Click += btnYoneticiSil_Click;
             // 
             // btnYoneticiGuncelle
             // 
-            btnYoneticiGuncelle.Location = new Point(1064, 83);
+            btnYoneticiGuncelle.BackColor = Color.WhiteSmoke;
+            btnYoneticiGuncelle.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnYoneticiGuncelle.ForeColor = SystemColors.ControlText;
+            btnYoneticiGuncelle.Location = new Point(1186, 121);
             btnYoneticiGuncelle.Name = "btnYoneticiGuncelle";
-            btnYoneticiGuncelle.Size = new Size(94, 29);
+            btnYoneticiGuncelle.Size = new Size(97, 36);
             btnYoneticiGuncelle.TabIndex = 32;
             btnYoneticiGuncelle.Text = "Güncelle";
-            btnYoneticiGuncelle.UseVisualStyleBackColor = true;
+            btnYoneticiGuncelle.UseVisualStyleBackColor = false;
             btnYoneticiGuncelle.Click += btnYoneticiGuncelle_Click;
             // 
             // label2

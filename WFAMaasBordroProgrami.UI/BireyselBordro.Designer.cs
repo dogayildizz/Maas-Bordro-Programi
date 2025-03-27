@@ -82,14 +82,14 @@
             // 
             // btnBordroGoruntule
             // 
-            btnBordroGoruntule.BackColor = Color.FromArgb(66, 84, 94);
+            btnBordroGoruntule.BackColor = Color.WhiteSmoke;
             btnBordroGoruntule.CustomizableEdges = customizableEdges3;
             btnBordroGoruntule.DisabledState.BorderColor = Color.DarkGray;
             btnBordroGoruntule.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBordroGoruntule.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBordroGoruntule.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnBordroGoruntule.FillColor = Color.FromArgb(66, 84, 94);
-            btnBordroGoruntule.Font = new Font("Segoe UI", 9F);
+            btnBordroGoruntule.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnBordroGoruntule.ForeColor = Color.White;
             btnBordroGoruntule.Location = new Point(938, 203);
             btnBordroGoruntule.Name = "btnBordroGoruntule";
@@ -118,7 +118,7 @@
             btnBireyselMailGonder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBireyselMailGonder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnBireyselMailGonder.FillColor = Color.FromArgb(66, 84, 94);
-            btnBireyselMailGonder.Font = new Font("Segoe UI", 9F);
+            btnBireyselMailGonder.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnBireyselMailGonder.ForeColor = Color.White;
             btnBireyselMailGonder.Location = new Point(688, 411);
             btnBireyselMailGonder.Name = "btnBireyselMailGonder";
@@ -187,7 +187,7 @@
             btnBireyselJsonOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBireyselJsonOlustur.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnBireyselJsonOlustur.FillColor = Color.FromArgb(66, 84, 94);
-            btnBireyselJsonOlustur.Font = new Font("Segoe UI", 9F);
+            btnBireyselJsonOlustur.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnBireyselJsonOlustur.ForeColor = Color.White;
             btnBireyselJsonOlustur.Location = new Point(938, 411);
             btnBireyselJsonOlustur.Name = "btnBireyselJsonOlustur";

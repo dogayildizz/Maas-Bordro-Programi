@@ -55,9 +55,9 @@
             btnPdfOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPdfOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnPdfOlustur.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPdfOlustur.FillColor = Color.FromArgb(66, 84, 94);
-            btnPdfOlustur.Font = new Font("Segoe UI", 9F);
-            btnPdfOlustur.ForeColor = Color.White;
+            btnPdfOlustur.FillColor = Color.WhiteSmoke;
+            btnPdfOlustur.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnPdfOlustur.ForeColor = SystemColors.ControlText;
             btnPdfOlustur.Location = new Point(771, 426);
             btnPdfOlustur.Name = "btnPdfOlustur";
             btnPdfOlustur.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -69,14 +69,15 @@
             // btnExcelOlustur
             // 
             btnExcelOlustur.BackColor = Color.FromArgb(66, 84, 94);
+            btnExcelOlustur.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             btnExcelOlustur.CustomizableEdges = customizableEdges3;
             btnExcelOlustur.DisabledState.BorderColor = Color.DarkGray;
             btnExcelOlustur.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcelOlustur.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnExcelOlustur.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExcelOlustur.FillColor = Color.FromArgb(66, 84, 94);
-            btnExcelOlustur.Font = new Font("Segoe UI", 9F);
-            btnExcelOlustur.ForeColor = Color.White;
+            btnExcelOlustur.FillColor = Color.WhiteSmoke;
+            btnExcelOlustur.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnExcelOlustur.ForeColor = SystemColors.ControlText;
             btnExcelOlustur.Location = new Point(1021, 426);
             btnExcelOlustur.Name = "btnExcelOlustur";
             btnExcelOlustur.ShadowDecoration.CustomizableEdges = customizableEdges4;

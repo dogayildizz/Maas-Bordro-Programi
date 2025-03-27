@@ -290,7 +290,6 @@ namespace WFAMaasBordroProgrami.UI
             btnMemurEkle.Text = "Ekle";
             btnMemurEkle.UseVisualStyleBackColor = false;
             btnMemurEkle.Click += btnMemurEkle_Click;
-            btnMemurEkle.MouseEnter += btnMemurEkle_MouseEnter;
             // 
             // label1
             // 

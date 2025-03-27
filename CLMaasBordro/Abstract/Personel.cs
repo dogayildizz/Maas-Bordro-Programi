@@ -2,7 +2,7 @@
 
 namespace CLMaasBordro.Abstract
 {
-    public abstract class Personel
+    public abstract class Personel 
     {
         public string AdSoyad { get; set; }
         public abstract string Kadro { get;}       

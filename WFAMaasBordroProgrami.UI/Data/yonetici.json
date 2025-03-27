@@ -1,30 +1,34 @@
 [
   {
-    "Kadro": "Yonetici",
-    "EkKazanc": 2000,
-    "AnaKazanc": 110000,
-    "AdSoyad": "Do\u011Fa Y\u0131ld\u0131z",
-    "CalismaSaati": 200
+    "Kadro": "Y\u00F6netici",
+    "EkKazanc": 5000,
+    "AnaKazanc": 137500,
+    "SaatlikUcret": 550,
+    "AdSoyad": "Berkay Arslan",
+    "CalismaSaati": 250
   },
   {
-    "Kadro": "Yonetici",
-    "EkKazanc": 2000,
-    "AnaKazanc": 5500,
-    "AdSoyad": "Sibel Y\u0131ld\u0131z",
-    "CalismaSaati": 10
-  },
-  {
-    "Kadro": "Yonetici",
-    "EkKazanc": 2000,
+    "Kadro": "Y\u00F6netici",
+    "EkKazanc": 5000,
     "AnaKazanc": 33000,
+    "SaatlikUcret": 550,
     "AdSoyad": "Servet Y\u0131ld\u0131z",
     "CalismaSaati": 60
   },
   {
-    "Kadro": "Yonetici",
-    "EkKazanc": 2000,
-    "AnaKazanc": 137500,
-    "AdSoyad": "Berkay Arslan",
-    "CalismaSaati": 250
+    "Kadro": "Y\u00F6netici",
+    "EkKazanc": 5000,
+    "AnaKazanc": 110000,
+    "SaatlikUcret": 550,
+    "AdSoyad": "Do\u011Fa Y\u0131ld\u0131z",
+    "CalismaSaati": 200
+  },
+  {
+    "Kadro": "Y\u00F6netici",
+    "EkKazanc": 5000,
+    "AnaKazanc": 55000,
+    "SaatlikUcret": 550,
+    "AdSoyad": "Sibel Y\u0131ld\u0131z",
+    "CalismaSaati": 100
   }
 ]

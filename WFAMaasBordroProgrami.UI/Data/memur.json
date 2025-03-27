@@ -1,21 +1,21 @@
 [
   {
     "Kadro": "Memur",
-    "EkKazanc": 0,
-    "AnaKazanc": 11400,
+    "EkKazanc": 17100.0,
+    "AnaKazanc": 114000,
     "MemurunDerecesi": 0,
     "SaatlikUcret": 570,
     "AdSoyad": "Merve Mihmano\u011Flu",
-    "CalismaSaati": 20
+    "CalismaSaati": 200
   },
   {
     "Kadro": "Memur",
     "EkKazanc": 0,
-    "AnaKazanc": 34200,
+    "AnaKazanc": 102600,
     "MemurunDerecesi": 0,
     "SaatlikUcret": 570,
     "AdSoyad": "Talha Din",
-    "CalismaSaati": 60
+    "CalismaSaati": 180
   },
   {
     "Kadro": "Memur",

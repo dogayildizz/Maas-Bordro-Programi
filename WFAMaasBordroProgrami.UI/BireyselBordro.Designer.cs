@@ -68,7 +68,6 @@
             cmbBordrosuGoruntulenmekIstenenPersonel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbBordrosuGoruntulenmekIstenenPersonel.Size = new Size(509, 36);
             cmbBordrosuGoruntulenmekIstenenPersonel.TabIndex = 4;
-            cmbBordrosuGoruntulenmekIstenenPersonel.SelectedIndexChanged += cmbBordrosuGoruntulenmekIstenenPersonel_SelectedIndexChanged;
             // 
             // guna2HtmlLabel2
             // 

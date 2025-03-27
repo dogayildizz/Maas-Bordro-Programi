@@ -14,19 +14,25 @@ namespace CLMaasBordro.Data
         {
             //çalışan programın bulunduğu klasörün tam yolunu alır ve projeDizini değişkenine atar
             string projeDizini = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            //Oluşacak dosya adını, bordrosu oluşturulacak kişinin adı soyadı, bordronun oluşturulduğu ay ve yıl olarak belirlettik.
             string hedefDizin = Path.Combine(projeDizini, @"..\..\..\", $"{adSoyad} Maas Bordro, {DateTime.Now.ToString("MMMM", new System.Globalization.CultureInfo("tr-TR"))} {DateTime.Now.Year}");
+
             string dosyaYolu = Path.Combine(hedefDizin, $"{adSoyad} bordro.json");
-            //Data klasörüm var mı 
+
+            //Data klasörüm yok mu? 
             if (!Directory.Exists(hedefDizin))
             {
                 //eğer yoksa oluştur 
                 Directory.CreateDirectory(hedefDizin);
             }
 
-            var jsonAyarlar = new JsonSerializerOptions { WriteIndented = true };
 
-            string yeniJson = JsonSerializer.Serialize<T>(personel, jsonAyarlar);
-            File.WriteAllText(dosyaYolu, yeniJson);
+            var jsonAyarlar = new JsonSerializerOptions { WriteIndented = true }; //Verileri satır satır yazsın dedik.
+
+            string yeniJson = JsonSerializer.Serialize<T>(personel, jsonAyarlar); //Json formatına dönüştürdük.
+
+            File.WriteAllText(dosyaYolu, yeniJson); //Belirlediğimiz dosya yoluna json ı yazdırdık.
         }
 
     }

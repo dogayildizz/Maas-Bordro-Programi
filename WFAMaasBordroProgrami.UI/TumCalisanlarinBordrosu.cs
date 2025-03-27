@@ -81,7 +81,6 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnExcelOlustur_Click(object sender, EventArgs e)
         {
-            //Value property si kullanıcının yaptığı seçimi veya girdiyi almak için kullanılır.
 
             try
             {
@@ -114,7 +113,7 @@ namespace WFAMaasBordroProgrami.UI
                         satir++;
                     }
 
-                    //SaveFileDialog, kullanıcının bir dosyayı kaydetmek için dosya adı ve konumu seçmesini sağlayan bir Windows bileşenidir.
+                    //SaveFileDialog, Windows Forms uygulamalarında kullanıcının bir dosya kaydetmek için konum ve isim seçmesine olanak tanıyan bir bileşendir. Kullanıcıya bir "Dosya Kaydet" penceresi açar ve belirlenen dosya adını/ dizinini döndürür.
                     using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                     {
                         saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx|All Files (*.*)|*.*";   //Dosya türü
@@ -140,31 +139,34 @@ namespace WFAMaasBordroProgrami.UI
             try
             {
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); //Türkçe karakterlerin düzgün görünmesini sağlar.
+                //SaveFileDialog, Windows Forms uygulamalarında kullanıcının bir dosya kaydetmek için konum ve isim seçmesine olanak tanıyan bir bileşendir. Kullanıcıya bir "Dosya Kaydet" penceresi açar ve belirlenen dosya adını/dizinini döndürür.
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "PDF Dosyası|*.pdf"; //Dosya türü
                 saveFileDialog.Title = "PDF Dosyası Kaydet"; //Pencere başlığı
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK) //Kullanıcı açılan pencerede OK(tamam,evet,vs.. bir onay tuşuna) basarsa
                 {
-                    Document document = new Document();
-                    PdfWriter.GetInstance(document, new FileStream(saveFileDialog.FileName, FileMode.Create));
-                    document.Open();
+                    Document document = new Document(); //Document sınıfı, iTextSharp kütüphanesi ile bir PDF belgesi oluşturmak için kullanılır.
+                    PdfWriter.GetInstance(document, new FileStream(saveFileDialog.FileName, FileMode.Create)); //seçilen dosya konumuna PDF Yazıcı bağlanıyor.
+
+                    document.Open(); //Pdf belgesine veri ekleyebilmek için açıyoruz.
 
                     // Türkçe karakterleri destekleyen bir font kullanıyoruz
                     BaseFont baseFont = BaseFont.CreateFont("c:\\windows\\fonts\\arial.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); // Arial fontu ile
-                    Font font = new Font(baseFont, 12); // Fontu ekliyoruz
+                    Font font = new Font(baseFont, 12); // 12 punto büyüklüğünde fontu ekliyoruz
 
-                    PdfPTable table = new PdfPTable(lvTumCalisanlarinBordrosu.Columns.Count);
+                    PdfPTable table = new PdfPTable(lvTumCalisanlarinBordrosu.Columns.Count); //Bir tablo oluşturduk. ListViewdeki sütun sayısı kadar tabloda sütunlar oluşuyor.
+
                     table.WidthPercentage = 100;
 
-                    foreach (ColumnHeader column in lvTumCalisanlarinBordrosu.Columns)
+                    foreach (ColumnHeader column in lvTumCalisanlarinBordrosu.Columns) //Tabloya arkaplanı gri renkte olacak şekilde sütun başlıkları ekleniyor.
                     {
                         PdfPCell pdfPCell = new PdfPCell(new Phrase(column.Text, font)); // Burada fontu kullandık
                         pdfPCell.BackgroundColor = BaseColor.LIGHT_GRAY;
                         table.AddCell(pdfPCell);
                     }
 
-                    foreach (ListViewItem item in lvTumCalisanlarinBordrosu.Items)
+                    foreach (ListViewItem item in lvTumCalisanlarinBordrosu.Items) //Tabloya listviewdeki veriler ekleniyor.
                     {
                         foreach (ListViewItem.ListViewSubItem subItem in item.SubItems)
                         {
@@ -172,8 +174,8 @@ namespace WFAMaasBordroProgrami.UI
                         }
                     }
 
-                    document.Add(table);
-                    document.Close();
+                    document.Add(table);  //Oluşan tabloyu ekliyoruz.
+                    document.Close(); //PDF dosyasını kapatıyoruz.
                     MessageBox.Show("PDF başarıyla oluşturuldu.");
                 }
             }
@@ -185,9 +187,6 @@ namespace WFAMaasBordroProgrami.UI
 
         }
 
-        private void btnJsonKlasorOlustur_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

@@ -13,7 +13,7 @@ namespace CLMaasBordro.Data
     {
 
         public override string Kadro { get; } = "Memur";
-        public decimal EkKazanc
+        public decimal EkKazanc  //180 saatten fazla çalışan memurlar ek mesai yapmış sayılır, normalde aldığı ücretin 1.5 katını alır.
         {
             get 
             { 
@@ -28,15 +28,19 @@ namespace CLMaasBordro.Data
 
             }
         }
-        public decimal AnaKazanc
+        public decimal AnaKazanc //180 ve altı çalışma ana kazanç olarak geçer. Eğer 180 saatten fazla çalıştıysa, 180 saatlik çalışması ana kazancı olur. Gerisi ek kazancı olur.
         {
             get
             {
+                if(CalismaSaati<=180)
                 return (decimal)CalismaSaati * SaatlikUcret;
+
+                else
+                    return 180 * SaatlikUcret;
             }
         }
         public MemurDerecesi MemurunDerecesi { get; set; }
-        public override decimal SaatlikUcret
+        public override decimal SaatlikUcret  //Memurun derecesine göre saatlik ücreti belirlendi.
         {
             get
             {
@@ -58,7 +62,7 @@ namespace CLMaasBordro.Data
             }
 
         }
-        public override decimal ToplamMaasHesapla()
+        public override decimal ToplamMaasHesapla() //Total maaşı anakazanç ve ekmesailerinin toplamıdır.
         {
             return AnaKazanc + EkKazanc;
         }

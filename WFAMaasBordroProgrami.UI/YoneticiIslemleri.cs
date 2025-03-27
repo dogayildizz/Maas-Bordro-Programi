@@ -16,12 +16,12 @@ namespace WFAMaasBordroProgrami.UI
 {
     public partial class YoneticiIslemleri : Form
     {
-        bool cellClickEdildiMi = false;
+        bool cellClickEdildiMi = false; //Kullanıcı datagride tıkladığında true ya dönüyor. UI paketinden kaynaklı oluşan hataların önüne geçmek için tanımlandı.
         List<Yonetici> yoneticiler = new List<Yonetici>();
-        public bool BilgilerGecerliMi()
+        public bool BilgilerGecerliMi() //Kullanıcının girdiği veriler, geçerli veriler mi kontrolü yapan metot
         {
             bool bilgilerGecerliMi = true;
-            if (txtYoneticiAdSoyad.Text == string.Empty || txtYoneticiCalismaSaati.Text == string.Empty)
+            if (txtYoneticiAdSoyad.Text == string.Empty || txtYoneticiCalismaSaati.Text == string.Empty || String.IsNullOrWhiteSpace(txtYoneticiAdSoyad.Text))
             {
                 bilgilerGecerliMi = false;
                 MessageBox.Show("Lütfen tüm bilgileri girdiğinizden emin olun!");
@@ -36,12 +36,12 @@ namespace WFAMaasBordroProgrami.UI
 
             return bilgilerGecerliMi;
         }
-        public void ListeVeJsonGuncelle()
+        public void ListeVeJsonGuncelle() //Kullanıcının seçtiği personeli, yazdığı yeni bilgiler ile yoneticiler listesinde günceller, güncel listeyi Jsona yazar.
         {
             Yonetici secilenYonetici = new Yonetici();
             secilenYonetici.AdSoyad = dgvYoneticiler.SelectedRows[0].Cells[4].Value.ToString();
 
-            for (int i = 0; i < yoneticiler.Count; i++)
+            for (int i = 0; i < yoneticiler.Count; i++)  //Seçilen personelle aynı isimdeki personeli listede arıyor, o kişiyi bulunca yeni bilgilerini yazıyor.
             {
                 Yonetici yonetici = yoneticiler[i];
                 if (yonetici.AdSoyad == secilenYonetici.AdSoyad)
@@ -59,18 +59,21 @@ namespace WFAMaasBordroProgrami.UI
         public void DataGridViewGuncelle()
         {
             yoneticiler = JsonDosya.Oku<Yonetici>("yonetici.json");
+            yoneticiler.Reverse();
             dgvYoneticiler.DataSource = null;
             dgvYoneticiler.DataSource = yoneticiler;
 
+            //DataGridViewde görünmesini istemediğimiz bilgilerin görünürlüğünü gizli yaptık.
             dgvYoneticiler.Columns["SaatlikUcret"].Visible = false;
             dgvYoneticiler.Columns["EkKazanc"].Visible = false;
             dgvYoneticiler.Columns["AnaKazanc"].Visible = false;
 
+            //DataGridViewde otomatik olarak yazan başlıkları değiştirdik. (Yazım açısından güzel görünsün diye)
             dgvYoneticiler.Columns[4].HeaderText = "Ad Soyad";
             dgvYoneticiler.Columns[5].HeaderText = "Çalışma Saati";
 
         }
-        public void ListeVeJsonEkle()
+        public void ListeVeJsonEkle() //Yeni yönetici nesnesi oluşturup, bu nesneyi hem list imize hem de json ımıza ekleyen metot.
         {
             Yonetici yonetici = new Yonetici
             {
@@ -80,7 +83,7 @@ namespace WFAMaasBordroProgrami.UI
             yoneticiler.Add(yonetici);
             JsonDosya.Yaz(yoneticiler, "yonetici.json");
         }
-        public void ListeVeJsonSil()
+        public void ListeVeJsonSil() //Kullanıcının seçtiği yönetici nesnesini listeden silen, güncel listeyi tekrardan jsona yazdıran metot.
         {
             Yonetici secilenYonetici = new Yonetici();
 
@@ -96,11 +99,11 @@ namespace WFAMaasBordroProgrami.UI
             }
             JsonDosya.Yaz(yoneticiler, "yonetici.json");
         }
-        public void Temizle()
+        public void Temizle() //Form ekranındaki araçların içini temizleyen metot.
         {
             txtYoneticiAdSoyad.Text = txtYoneticiCalismaSaati.Text = string.Empty;
             dgvYoneticiler.ClearSelection();
-            //cellClickEdildiMi = false;
+            cellClickEdildiMi = false;
         }
         public YoneticiIslemleri()
         {
@@ -120,14 +123,17 @@ namespace WFAMaasBordroProgrami.UI
             {
                 return;
             }
-            DataGridViewRow seciliSatir = dgvYoneticiler.SelectedRows[0];
+            DataGridViewRow seciliSatir = dgvYoneticiler.SelectedRows[0]; //Çoklu seçim kapalı olduğu için SelectedRows[0] seçili olan satırı ifade eder.
 
+            //kullanıcının seçtiği satırdaki kişinin bilgileri yukarıdaki textboxlara yazdırıldı.
             txtYoneticiAdSoyad.Text = seciliSatir.Cells[4].Value.ToString();
             txtYoneticiCalismaSaati.Text = seciliSatir.Cells[5].Value.ToString();
         }
 
         private void btnYoneticiEkle_Click(object sender, EventArgs e)
         {
+            //Kullanıcının girdiği bilgilerin geçerliliğine bakar, aynı isimde bir mevcut mu diye bakar. Her şey geçerliyse kayıt eder.
+
             if (!BilgilerGecerliMi())
             { return; }
 
@@ -139,6 +145,7 @@ namespace WFAMaasBordroProgrami.UI
                     return;
                 }
             }
+
             ListeVeJsonEkle();
             DataGridViewGuncelle();
             Temizle();
@@ -146,6 +153,8 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnYoneticiSil_Click(object sender, EventArgs e)
         {
+            //Kullanıcı bir personel seçti mi diye kontrol eder, seçiliyse o personeli siler.
+
             if (dgvYoneticiler.SelectedRows.Count == 0 || !cellClickEdildiMi)
             {
                 MessageBox.Show("Lütfen bir çalışan seçiniz!");
@@ -158,6 +167,8 @@ namespace WFAMaasBordroProgrami.UI
 
         private void btnYoneticiGuncelle_Click(object sender, EventArgs e)
         {
+            //Kullanıcı bir personel seçti mi diye kontrol eder, güncellemek istediği bilgiler geçerli mi diye kontrol eder. Her şey geçerliyse personeli günceller.
+
             if (dgvYoneticiler.SelectedRows.Count == 0 || !cellClickEdildiMi)
             {
                 MessageBox.Show("Lütfen bir çalışan seçiniz!");

@@ -12,11 +12,11 @@ namespace CLMaasBordro.Data
     {
 
         public override string Kadro {get;} = "Yönetici";
-        public decimal EkKazanc
+        public decimal EkKazanc //Her yönetici aylık olarak 5000 tl ek bonus ödemesi alıyor.
         {
             get 
             { 
-                return 2000; 
+                return 5000; 
             }
         }
         public decimal AnaKazanc
@@ -26,7 +26,7 @@ namespace CLMaasBordro.Data
                 return SaatlikUcret*CalismaSaati; 
             }
         }
-        public override decimal SaatlikUcret
+        public override decimal SaatlikUcret //Yöneticilerin saatlik çalışma ücreti 550 lira olarak belirlendi.
         {
             get
             {

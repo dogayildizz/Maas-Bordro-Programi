@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CLMaasBordro.Enum
 {
-    public enum MemurDerecesi
+    public enum MemurDerecesi   //Memurların derecesinin tutulduğu enum classı
     {
         UstKidemli,
         Kidemli,

@@ -18,18 +18,13 @@ namespace WFAMaasBordroProgrami.UI
         public void FormGetir(Form form)
         {
             pnlIcerik.Controls.Clear();
-            form.MdiParent = this; //bu forma form2yi çaðýrdýk
+            form.MdiParent = this; //this form(içinde bulunduðumuz form), ana formdur. parametreden aldýðýmýz form, ana formun alt formudur.
             form.FormBorderStyle = FormBorderStyle.None; //hareket etmesini engelledik
-            pnlIcerik.Controls.Add(form);
-            form.Show(); //form2yi göster dedik.
+            pnlIcerik.Controls.Add(form);  //Çaðýrdýðýmýz formu pnlIcerik adýndaki panele ekledik.
+            form.Show(); //Çaðýrdýðýmýz formu göster dedik.
         }
-        private void frmAnaMenu_Load(object sender, EventArgs e)
-        {
 
-        }
-        #region Buttonlarýn Click Eventleri
-      
-
+        #region Buttonlarýn Click Eventleri (pnlIcerik adlý panele formlar getirdik)
 
         private void btnBireyselBordroFormunuGetir_Click(object sender, EventArgs e)
         {
@@ -56,6 +51,8 @@ namespace WFAMaasBordroProgrami.UI
         }
 
         #endregion
+
+        #region Formu kapat ve alta at tuþlarýný manuel olarak ekledik.
         private void btnFormuAltaAt_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -64,5 +61,7 @@ namespace WFAMaasBordroProgrami.UI
         {
             Application.Exit();
         }
+        #endregion
+
     }
 }
